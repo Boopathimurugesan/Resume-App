@@ -1,0 +1,541 @@
+﻿@using ResumeDBTracker.Business.ViewModel;
+@using ResumeDBTracker.Common.Helper
+@using X.PagedList.Mvc.Core
+@using X.PagedList;
+@using X.PagedList.Web.Common;
+@model CandidatePagingInfo
+@{
+    ViewData["Title"] = "Candidate Search";
+    SolrFacetResult solrFacetResult = new SolrFacetResult();
+    SearchCandiateRequest searchCandiateRequest = TempData.Get<SearchCandiateRequest>("searchCandiateRequest");
+    if (searchCandiateRequest is null) { searchCandiateRequest = new(); }
+    else { TempData.Keep("searchCandiateRequest"); }
+}
+
+
+<style>
+    .selectpicker option {
+        border: none;
+        background-color: white;
+        outline: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        color: #14B1B2;
+        font-weight: bold;
+        font-size: 30px;
+        margin: 0;
+        padding-left: 0;
+        margin-top: -20px;
+        background: none;
+    }
+
+    select.selectpicker {
+        border: none;
+        background-color: white;
+        outline: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        color: #14B1B2;
+        font-weight: bold;
+        font-size: 30px;
+        margin: 0;
+        padding-left: 0;
+        margin-top: -20px;
+        background: none;
+    }</style>
+
+<script>
+        function downloadFile(fileName, fileContent) {
+            let bufferArray = base64ToArrayBuffer(fileContent);
+            const blob = new Blob([new Uint8Array(bufferArray)], { type: 'application/msword' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = fileName;
+            a.style.display = 'none';
+            document.body.appendChild(a);
+
+            a.click();
+
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+
+        function base64ToArrayBuffer(base64) {
+            const binaryString = window.atob(base64);
+            const length = binaryString.length;
+            const buffer = new ArrayBuffer(length);
+            const view = new Uint8Array(buffer);
+            for (let i = 0; i < length; i++) {
+                view[i] = binaryString.charCodeAt(i);
+            }
+            return buffer;
+        }
+
+        $(function () {
+            $('#create-category-modal-btn').css("display", "none");
+            $('#Locations').selectpicker();
+            var originalLabels = @Html.Raw(Json.Serialize(Model.searchCandiateRequest.Locations));
+            $('#Locations').selectpicker('val', originalLabels);
+            $('#btn').click(function () {
+                $('input[type="text"]').val(0);
+                $('select.SlectBox')[0].sumo.unSelectAll();
+                $('select.SlectBox')[1].sumo.unSelectAll();
+            });
+        });
+
+
+        $(document).ready(function () {
+            $('.candidate_checkbox').on('click', function () {
+                if ($('.candidate_checkbox:checked').length > 0) {
+                    $('#create-category-modal-btn').css("display", "block");
+                }
+                else{
+                    $('#create-category-modal-btn').css("display", "none");
+                }
+            });
+            $('#newcategory-checkbox').on('click', function () {
+                if ($('#newcategory-checkbox').is(":checked")) {
+                    $("#existingcategory").css("display", "none");
+                    $("#newcategory").css("display", "block");
+                } else {
+                    $("#existingcategory").css("display", "block");
+                    $("#newcategory").css("display", "none");
+                    $("#newcategory").val("");
+                }
+            });
+            $("#submit-category-modal-btn").on('click', function (e) {
+                var candidateIds = $('#candidate_ids:checked').map(function () {
+                    return this.value;
+                }).get().join(",");
+                var name = $("#newcategory").val();
+                var categoryId = $("#existingcategory").val();
+                var isNew = $('#newcategory-checkbox').is(":checked");
+                var data = isNew ? {
+                    candidateIds: candidateIds,
+                    name: name
+                } : {
+                    candidateIds: candidateIds,
+                    categoryId: categoryId
+                };
+                $.ajax(
+                    {
+                        type: 'POST',
+                        dataType: 'JSON',
+                        url: isNew ? '@Url.Action("CategoryInsert")' :'@Url.Action("CategoryCandidateMappingInsert")' ,
+                        data: data,
+                        success:
+                            function (response) {
+                                alert("Updated Successfully");
+                                $('#create-category-modal-btn').css("display", "none");
+                                 $("#existingcategory").css("display", "block");
+                             $("#newcategory").css("display", "none");
+                            $("#newcategory").val("");
+                            },
+                        error:
+                            function (response) {
+                                alert("Update Failed");
+                            }
+                    });
+            });
+        });
+
+    function openfileinnewtab(filename, yourDocumentBase64VarHere) {
+        if (filename.includes('.pdf')) {
+            let pdfWindow = window.open("")
+            pdfWindow.document.write(
+                "<iframe width='100%' height='100%' src='data:application/pdf;base64, " +
+                encodeURI(yourDocumentBase64VarHere) + "'></iframe>")
+        }
+        else {
+            downloadFile(filename, yourDocumentBase64VarHere);
+        }
+    }
+    $(document).ready(function () {
+        $('.deletecandidate').on('click', function (e) {
+            //alert("deleteuser");
+            var id = $(this).data("id");
+            //alert(id);
+            var mydeleteId = $('#deletecandidateid_' + id).data('value');
+            //alert(mydeleteId);
+            $(".modal-body #deleteId").val(mydeleteId);
+            $('#deleteModal').modal('show');
+        });
+
+         $('#create-category-modal-btn').on('click', function (e) {
+            $('#create-category-modal').modal('show');
+        });
+    });
+    $(document).ready(function () {
+        $('.editcandidate').on('click', function (e) {
+            var id = $(this).data("id");
+            var myEditname = $('#editcandidateid_' + id).data('name');
+            var myEditexperience = $('#editcandidateid_' + id).data('experience');
+            var myEditemail = $('#editcandidateid_' + id).data('email');
+            var myEditskill = $('#editcandidateid_' + id).data('skill');
+            var mycandidateId = $('#editcandidateid_' + id).data('value');
+            var myEditphonenumber = $('#editcandidateid_' + id).data('phonenumber');
+            var myEditlocation = $('#editcandidateid_' + id).data('location');
+            $(".modal-body #Editname").val(myEditname);
+            $(".modal-body #Editexperience").val(myEditexperience);
+            $(".modal-body #Editemail").val(myEditemail);
+            $(".modal-body #Editskill").val(myEditskill);
+            $(".modal-body #candidateId").val(mycandidateId);
+            if (myEditphonenumber != '') {
+                $(".modal-body #Editphonenumber").val(myEditphonenumber);
+            }
+            $(".modal-body #Editlocation").val(myEditlocation);
+            $('#editModal').modal('show');
+        });
+
+        $(document).ready(function () {
+            $('#updatebtn').on('click', function (e) {
+                var candidateId = $(".modal-body #candidateId").val();
+                var name = $(".modal-body #Editname").val();
+                var experience = $(".modal-body #Editexperience").val();
+                var email = $(".modal-body #Editemail").val();
+                var skill = $(".modal-body #Editskill").val();
+                var phonenumber = $(".modal-body #Editphonenumber").val();
+                var location = $(".modal-body #Editlocation").val();
+                $.ajax(
+                    {
+                        type: 'POST',
+                        dataType: 'JSON',
+                        url: '@Url.Action("UpdateCandidate")',
+                        data: { candidateId: candidateId, name: name, experience: experience, email: email, skill: skill, phonenumber: phonenumber, location: location },
+                        success:
+                            function (response) {
+                                alert("Updated Successfully");
+                                var host = window.location.host;
+                                var path = "@Url.Action("CandidateList")";
+                                window.location.pathname = path;
+                                var url = host + path;
+                                window.location(url);
+                            },
+                        error:
+                            function (response) {
+                                alert("Update Failed");
+                            }
+                    });
+            });
+        });
+
+        $(document).ready(function () {
+            $('#deletebtn').on('click', function (e) {
+                var txt = $(".modal-body #deleteId").val();
+                $.ajax(
+                    {
+                        type: 'POST',
+                        dataType: 'json',
+                        url: '@Url.Action("DeleteCandidate")',
+                        data: { id: txt },
+                        success:
+                            function (response) {
+                                alert("Candidate Deleted Successfully");
+                                var host = window.location.host;
+                                var path = "@Url.Action("CandidateList")";
+                                window.location.pathname = path;
+                                var url = host + path;
+                                window.location(url);
+                            },
+                        error:
+                            function (response) {
+                                alert("Candidate delete Failed");
+                            }
+                    });
+            });
+        });
+    });
+    $(document).ready(function () {
+        $("#reset").on("click", function () {
+            $('#Keyword').val("");
+            $('#ExperienceFrom').val("");
+            $('#ExperienceTo').val("");
+            $("#Locations").val('default');
+            $("#Locations").selectpicker("refresh");
+        });
+    });
+     function deleteCandidate_click() {
+        var host = window.location.host;
+        var txt = $(".modal-body #deleteId").val();
+        var ArrNames1 = "@Url.Action("DeleteCandidate")";
+        var ArrNames = ArrNames1.split('/');
+        var controller = ArrNames[1];
+        var Action = ArrNames[2];
+        var path = "/" + controller + "/" + Action + "/" + txt;
+        window.location.pathname = path;
+        var url = host + path;
+        window.location(url);
+    }
+    </Script>
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="heading">
+                <h4> @ViewData["Title"] </h4>
+                <h5>All Candidates: @EmailData.CandidateCount</h5>
+            </div>
+        </div>
+    </div>
+    <form class="ui form" method="post" action=@Url.Action("CandidateList","Home") typeof="reset">
+        <div class="row align-items-center g-0">
+            <div class="col-12 col-md-12">
+                <div class="input-group mb-3">
+                    @Html.TextBox("Keyword", searchCandiateRequest.Keyword == "0" ? "":searchCandiateRequest.Keyword, new {@class = "form-control",PlaceHolder = "Keyword",id = "Keyword",style="width:500px" });
+                </div>
+            </div>
+        </div>
+        <div class="row align-items-center g-0">
+            <div class="col-12 col-md-6">
+                <div class="input-group mb-3">
+
+                    <select id="Locations" name="Locations" title="Locations" aria-label="label for the select" class="form-control" data-live-search="true" multiple>
+                        @if (ViewBag.Location != null)
+                        {
+                            @foreach (var location in ViewBag.Location)
+                            {
+                                <option value="@location.Value">@location.Value</option>
+                            }
+                        }
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="row align-items-center g-0">
+            <div class="col-12 col-md-3">
+                <div class="input-group mb-3">
+                    @Html.TextBox("ExperienceFrom",searchCandiateRequest.ExperienceFrom, new { @class= "form-control",placeholder="Experience From",style="Width:100px"});
+                </div>
+                <div class="input-group mb-3">
+                    @Html.TextBox("ExperienceTo",searchCandiateRequest.ExperienceTo, new { @class= "form-control",placeholder="Experience To",style="Width:100px"});
+                </div>
+            </div>
+        </div>
+        <div class="row align-items-center g-0">
+            <div class="col-12 col-md-6">
+                <div class="input-group mb-3">
+                    <button type="submit" name="search" class="btn btn-outline-secondary rounded-0 shadow-none border-0 text-white w-auto bg-secondary bg-opacity-50">Search</button>
+                    <input id="reset" type="button" class="btn btn-outline-secondary rounded-0 shadow-none border-0 text-white w-auto bg-secondary bg-opacity-50" value="Clear All" />
+                    <input id="create-category-modal-btn" type="button" style="display:none;" class="btn btn-outline-secondary rounded-0 shadow-none border-0 text-white w-auto bg-secondary bg-opacity-50" value="Assign Category" />
+                </div>
+            </div>
+        </div>
+    </form>
+    @if (Model != null)
+    {
+        int? i = (@Model.page * @Model.pageSize) - @Model.pageSize;
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-12">
+                <div>
+                    <div class="midContent">
+                        <div class="tableName">
+                            <h6 class="poppins">All </h6>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table" id="AllDataList">
+                                <thead>
+                                    <tr>
+                                        <th class="countNo">Sr No</th>
+                                        <th>Details</th>
+                                        <th>Skills</th>
+                                        <th class="text-center">Experience</th>
+                                        <th class="action">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var emp in Model.CandidateList)
+                                    {
+                                        int? j = @i + 1;
+                                        <tr>
+                                            <td class="text-center">
+                                                <div>
+                                                    <input type="checkbox" id="candidate_ids" name="candidate_ids" class="candidate_checkbox" value="@emp.candidate_id" />
+                                                </div>
+                                            </td>
+                                            <td class="authorTd">
+                                                <a onclick="openfileinnewtab('@emp.file_name','@emp.resume_file')">
+                                                    @emp.first_name
+                                                </a>
+                                                <small class="text-muted d-block">@emp.phone_number</small>
+                                                <small class="text-muted d-block">@emp.email</small>
+                                                <small class="text-muted d-block">@emp.location</small>
+                                            </td>
+                                            <td>
+                                                @emp.technical_skill
+                                            </td>
+                                            <td class="text-center">
+                                                @emp.total_exp
+                                            </td>
+                                            <td class="action">
+                                                <button type="button" title="Download Resume" onclick="downloadFile('@emp.file_name','@emp.resume_file');"><i data-feather="download"></i></button>
+                                                <a class="editcandidate" id="editcandidateid_@i" data-id="@i" data-bs-toggle="modal" data-skill="@emp.technical_skill" data-name="@emp.first_name" data-location="@emp.location" data-phonenumber="@emp.phone_number" data-email="@emp.email" data-experience="@emp.total_exp" data-value="@emp.candidate_id" title="Edit user"><i data-feather="edit-2"></i></a>
+                                                <a class="deletecandidate" id="deletecandidateid_@i" data-bs-toggle="modal" data-id="@i" data-value="@emp.candidate_id" title="Delete Candidate"><i data-feather="trash"></i></a>
+                                            </td>
+                                        </tr>
+                                        i++;
+                                    }
+
+                                </tbody>
+
+                            </table>
+                            <div class="tableBottomDetails">
+                                <nav>
+                                    <ul class="pagination">
+                                        @if (Model != null)
+                                        {
+                                            <li class="page-item">
+                                                @Html.PagedListPager((IPagedList)Model.CandidateList,
+                                        page=> Url.Action("PaginationSearch",new {page=page}),
+                                        new PagedListRenderOptions
+                                        {  LiElementClasses = new List<string> {"page-item"},
+                                        PageClasses = new string[] { "page-link" }})
+                                            </li>
+                                        }
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="modal" id="deleteModal" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body text-center">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <h5>Are you sure?</h5>
+                        <p>Do you really want to delete this user? This <br>process can not be undone.</p>
+                        <div class="row justify-content-center mt-4">
+                            <div class="col-auto">
+                                <input type="text" name="deleteId" id="deleteId" value="" style="display:none;" />
+                                <input type="button" value="Yes" class="btn btn-green active" id="deletebtn" />
+                            </div>
+                            <div class="col-auto">
+                                <button type="submit" name="submit" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close">No</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal" id="create-category-modal" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body text-center">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <h5>Assign Category</h5>
+                        <div class="row justify-content-center mt-4">
+                            <div class="form-group row">
+                            <div class="col-12 mb-3">
+                                <select id="existingcategory" class="form-control">
+                                    <option value="">--select--</option>
+                                    @if (Model != null && Model.Categories != null && Model.Categories.Any())
+                                    {
+                                        foreach (var category in Model.Categories)
+                                        {
+                                            <option value="@category.category_id">@Html.Raw(category.name)</option>
+                                        }
+                                    }
+                                </select>
+                                </div>
+                                <div class="col-12 mb-3">
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox"  id="newcategory-checkbox"/>
+                                    <label class="form-check-label" for="newcategory-checkbox">New Category</label>
+                               </div>
+                               </div>
+                               <div class="col-12 mb-3">
+                               <input type="text" id="newcategory" class="form-control" style="display:none;" placeholder="Category Name"/>
+                               </div>
+                              </div>
+                            </div>
+                                                        
+                            <div class="col-auto">
+                                <button type="button" id="submit-category-modal-btn" class="btn btn-primary">Submit</button>
+                                <button type="submit" name="submit" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close">No</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+   
+
+        <div class="modal" id="editModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+             aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <h5>Edit Candidate</h5>
+                        <div class="form-group row">
+                            <div class="col-12 mb-3">
+                                <input type="text" id="Editname" name="name" value="" class="form-control" placeholder="Name" />
+                            </div>
+                            <div class="col-12 mb-3">
+                                <input type="text" id="Editemail" name="email" value="" class="form-control" placeholder="Email" />
+                            </div>
+                            <div class="col-12 mb-3">
+                                <input type="text" id="Editphonenumber" name="phonenumber" value="" class="form-control" placeholder="Phone number" />
+                            </div>
+                            <div class="col-12 mb-3">
+                                <input type="text" id="Editlocation" name="location" value="" class="form-control" placeholder="Location" />
+                            </div>
+                            <div class="col-12 mb-3">
+                                <input type="text" id="Editskill" name="skill" value="" textarea class="form-control" placeholder="Skills" />
+                            </div>
+                            <div class="col-12 mb-3">
+                                <input type="text" id="Editexperience" name="experience" value="" class="form-control" placeholder="Experience" />
+                            </div>
+                            <div>
+                                <input type="text" name="candidateId" value="" style="display:none;" id="candidateId" />
+                            </div>
+
+                            <div class="col-12 text-end">
+                                <button type="button" name="submit" id="updatebtn" class="btn btn-green">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    }
+    else
+    {
+        <div class=" text-center">
+            <br>
+            <br>
+            <br>
+            <h6 class="poppins">Please use filters to get the candidate details</h6>
+        </div>
+    }
+    <style>
+        nav {
+            display: flex;
+            justify-content: center;
+        }
+
+        .pagination {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+            .pagination li {
+                margin: 0 1px;
+            }
+    </style>
+</div>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}

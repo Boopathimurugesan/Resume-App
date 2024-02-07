@@ -1,0 +1,17 @@
+D:\Boopathi\workspace\ResumeDBTracker.BusinessLogic\obj\Debug\net6.0\ResumeDBTracker.Business.csproj.AssemblyReference.cache
+D:\Boopathi\workspace\ResumeDBTracker.BusinessLogic\obj\Debug\net6.0\ResumeDBTracker.Business.GeneratedMSBuildEditorConfig.editorconfig
+D:\Boopathi\workspace\ResumeDBTracker.BusinessLogic\obj\Debug\net6.0\ResumeDBTracker.Business.AssemblyInfoInputs.cache
+D:\Boopathi\workspace\ResumeDBTracker.BusinessLogic\obj\Debug\net6.0\ResumeDBTracker.Business.AssemblyInfo.cs
+D:\Boopathi\workspace\ResumeDBTracker.BusinessLogic\obj\Debug\net6.0\ResumeDBTracker.Business.csproj.CoreCompileInputs.cache
+D:\Boopathi\workspace\ResumeDBTracker.BusinessLogic\bin\Debug\net6.0\ResumeDBTracker.Business.deps.json
+D:\Boopathi\workspace\ResumeDBTracker.BusinessLogic\bin\Debug\net6.0\ResumeDBTracker.Business.dll
+D:\Boopathi\workspace\ResumeDBTracker.BusinessLogic\bin\Debug\net6.0\ResumeDBTracker.Business.pdb
+D:\Boopathi\workspace\ResumeDBTracker.BusinessLogic\bin\Debug\net6.0\ResumeDBTracker.Common.dll
+D:\Boopathi\workspace\ResumeDBTracker.BusinessLogic\bin\Debug\net6.0\ResumeDBTracker.Core.dll
+D:\Boopathi\workspace\ResumeDBTracker.BusinessLogic\bin\Debug\net6.0\ResumeDBTracker.Common.pdb
+D:\Boopathi\workspace\ResumeDBTracker.BusinessLogic\bin\Debug\net6.0\ResumeDBTracker.Core.pdb
+D:\Boopathi\workspace\ResumeDBTracker.BusinessLogic\obj\Debug\net6.0\ResumeDBTracker.Business.csproj.CopyComplete
+D:\Boopathi\workspace\ResumeDBTracker.BusinessLogic\obj\Debug\net6.0\ResumeDBTracker.Business.dll
+D:\Boopathi\workspace\ResumeDBTracker.BusinessLogic\obj\Debug\net6.0\refint\ResumeDBTracker.Business.dll
+D:\Boopathi\workspace\ResumeDBTracker.BusinessLogic\obj\Debug\net6.0\ResumeDBTracker.Business.pdb
+D:\Boopathi\workspace\ResumeDBTracker.BusinessLogic\obj\Debug\net6.0\ref\ResumeDBTracker.Business.dll

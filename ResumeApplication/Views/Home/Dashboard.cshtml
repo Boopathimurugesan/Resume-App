@@ -1,0 +1,127 @@
+﻿@using ResumeDBTracker.Core.Models;
+@{
+	ViewData["Title"] = "Dashboard";
+}
+@*@model User
+@{
+	//User user = TempData.Add<User>("User");
+	//User user = ViewData["User"] as User;
+	//if (user is null) { user = new(); }
+	//else { TempData.Keep("User"); }
+}*@
+
+<div class="fullContent">
+
+		<div class="contentSection">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<div class="heading">
+						<h4>@ViewData["Title"]</h4>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-12 col-sm-12 col-md-8 mb-4">
+						<div class="card dashCard shadow-sm">
+							<div class="card-body">
+								<div class="d-flex justify-content-between mb-3">
+									@*<h5>Recently Added</h5>*@
+									@*<div>
+										<a href="" title="edit profile"><i data-feather="edit-2"></i></a>
+										<a href="" title="view profile"><i data-feather="eye"></i></a>
+										<a href="" title="remove from here"><i data-feather="trash-2"></i></a>
+									</div>*@
+								</div>
+								<div class="authorTd">
+									<div class="row">
+										@*<div class="col-auto">
+											<div class="testiImage">
+												<a href="img/abdul.jpg" target="_blank" class="imgTable">
+													<img src="img/abdul.jpg" alt="" class="img-fluid" />
+												</a>
+											</div>
+										</div>*@
+										<div class="col">
+										<span class="poppins lh-base h4 mb-2">@EmailData.first_name @EmailData.last_name</span>
+											<div class="row align-items-left justify-content-between">
+												@*<div class="col-auto">
+													<span class="poppins">Position</span>
+												<small class="text-muted d-block"> @Model.</small>
+												</div>*@
+											<div>@*class="col-auto"*@
+													<span class="poppins">Email</span>
+												<small class="text-muted d-block"> @EmailData.email</small>
+												</div>
+												@*<div class="col-auto">
+													<span class="poppins">Phone</span>
+													<small class="text-muted d-block"> @Model.</small>
+												</div>*@
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-12 col-sm-6 col-md-4 mb-4">
+						<div class="card dashCard shadow-sm">
+						<a href="@Url.Action("CandidateList")">
+								<div class="card-body">
+									<div class="d-flex justify-content-between">
+										<h5>All Candidates</h5>
+										<i data-feather="users"></i>
+									</div>
+									<h1 class="text-dark mb-3">@EmailData.CandidateCount</h1>
+									<p class="mb-0">Click to view, add, update & delete</p>
+								</div>
+							</a>
+						</div>
+					</div>
+				<div class="col-12 col-sm-6 col-md-4 mb-4">
+					<div class="card dashCard shadow-sm">
+						<a href="@Url.Action("/")">
+							<div class="card-body">
+								<div class="d-flex justify-content-between">
+									<h5>All Technical Skill</h5>
+									<i data-feather="users"></i>
+								</div>
+								<h1 class="text-dark mb-3">@EmailData.TechnicalSkillCount</h1>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="col-12 col-sm-6 col-md-4 mb-4">
+					<div class="card dashCard shadow-sm">
+						<a href="@Url.Action("/")">
+							<div class="card-body">
+								<div class="d-flex justify-content-between">
+									<h5>All Categories</h5>
+									<i data-feather="users"></i>
+								</div>
+								<h1 class="text-dark mb-3">@EmailData.CategoryCount</h1>
+							</div>
+						</a>
+					</div>
+				</div>
+				@*<div class="row">
+					<div class="col-12 mb-4">
+						<div class="card dashCard shadow-sm">
+							<div class="card-body">
+								<h5 class="text-black text-uppercase fw-bold mb-3">Some Text</h5>
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor labore excepturi est. Soluta porro dolor obcaecati minima, modi debitis iste nostrum odit eligendi, iusto vel iure quam quibusdam tempore quia.</p>
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor labore excepturi est. Soluta porro dolor obcaecati minima.</p>
+								<p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor labore excepturi est. Soluta porro dolor obcaecati minima, modi debitis iste nostrum odit eligendi, iusto.</p>
+							</div>
+						</div>
+					</div>
+				</div>*@
+			</div>
+		</div>
+</div>
+@{
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Scripts {
+	@await Html.PartialAsync("_ValidationScriptsPartial")
+}

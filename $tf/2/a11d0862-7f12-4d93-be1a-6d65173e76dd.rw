@@ -1,0 +1,1 @@
+curl http://localhost:8983/solr/SBResumeTrackerCandidateSearchIndex/dataimport?command=full-import

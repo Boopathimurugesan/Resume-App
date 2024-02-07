@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+
+
+<dataConfig>
+  <dataSource  type="JdbcDataSource"
+              driver="com.microsoft.sqlserver.jdbc.SQLServerDriver"
+              url="jdbc:sqlserver://SKYBRIDGE-PC\SQLEXPRESS;databaseName=TestSolr"
+              user="sa"
+              password="sqlserver"/>
+  <document>
+    <entity name="ArticleDocument" pk="Id"
+      query="SELECT * FROM articles"
+      deltaImportQuery="select * from articles where Id='${dih.delta.Id}'"
+	    deltaQuery="select Id from articles where created > convert(datetime,'${dih.last_index_time}')">
+      <field column="Id" name="id"/>
+      <field column="Title" name="title"/>
+      <field column="Tags" name="tags"/>
+      
+      <field column="Created" name="created"/>
+    </entity>
+  
+    
+  </document>
+</dataConfig>

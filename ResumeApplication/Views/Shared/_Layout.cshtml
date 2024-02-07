@@ -1,0 +1,98 @@
+﻿@using ResumeDBTracker.Core.Models;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Admin Panel</title>
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.7.3/css/bootstrap-select.min.css" />
+
+    <link href=@Url.Content("~/css/bootstrap-slider.css") rel="stylesheet" type="text/css" />
+    <link href=@Url.Content("~/css/bootstrap.min.css") rel="stylesheet" type="text/css" />
+    <link href=@Url.Content("~/css/dataTables.bootstrap5.min.css") rel="stylesheet" type="text/css" />
+    <link href=@Url.Content("~/css/style.css") rel="stylesheet" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+</head>
+<body>
+    <div class="fullContent">
+        <div class="sidebar">
+            <div class="menuClose">
+                <i data-feather="x" class="d-block d-lg-none pe-cursor menuToggleIcon"></i>
+            </div>
+            <div class="logoBlock">
+                <img src="@Url.Content("~/img/logo.png")" alt="" class="img-fluid" />
+            </div>
+            <ul class="menuList">
+                <li><a class="poppins h6 mt-5 mb-3">Welcome  @EmailData.username </a></li>
+                <li><a href="@Url.Action("Dashboard")" class=""><i data-feather="layers"></i> Dashboard</a></li>
+                <li><a href="@Url.Action("ResumeUpload")" class=""><i data-feather="layers"></i> Resume Upload</a></li>
+                <li><a href="@Url.Action("CandidateList")" class=""><i data-feather="layers"></i> Candidate Search</a></li>
+                <li><a href="@Url.Action("UserManagement")"><i data-feather="layers"></i> All Users</a></li>
+                <li><a href="@Url.Action("CategoryManagement")"><i data-feather="layers"></i> All Categories</a></li>
+            </ul>
+        </div><div class="contentSection">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container">
+                    <i data-feather="menu" class="d-block d-lg-none menuToggleIcon pe-cursor"></i>
+                    <a class="navbar-brand"><img src="@Url.Content("~/img/logo.png")" class="d-block d-lg-none" /></a>
+                    <a class="navbar-brand"></a>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto align-items-center mb-2 mb-lg-0">
+                            <li class="nav-item"><a class="nav-link" href="#"><div class="userImg"><img src="@Url.Content("~/img/userDefault.png")" alt="" class="img-fluid"></div> Welcome @EmailData.username </a></li>
+                            <li class="nav-item"><a class="nav-link" href="#"> | </a></li>
+                            <li class="nav-item"><a href="#LogoutModal" data-bs-toggle="modal">Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="container">
+                <main role="main" class="pb-3">
+                    @RenderBody()
+                </main>
+            </div>
+
+            @await RenderSectionAsync("Scripts", required: false)
+        </div>
+        <div class="modal" id="LogoutModal" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body text-center">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <h5>Are you sure want to Logout?</h5>
+                        <div class="row justify-content-center mt-4">
+                            <div class="col-auto">
+                                <button type="submit" name="submit" class="btn btn-green active" onclick="@("window.location.href='" + @Url.Action("Logout", "Home") + "'");">Yes</button>
+                            </div>
+                            <div class="col-auto">
+                                <button type="submit" name="submit" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close">No</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2023 - ResumeApplication - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+
+
+    <script src=@Url.Content("~/js/jquery-3.5.1.js")></script>
+    <script src=@Url.Content("~/js/jquery.dataTables.min.js")></script>
+    <script src=@Url.Content("~/js/dataTables.bootstrap5.min.js")></script>
+    <script src=@Url.Content("~/js/feather.min.js")></script>
+    <script src=@Url.Content("~/js/bootstrap.bundle.min.js")></script>
+    <script src=@Url.Content("~/js/custom.js")></script>
+    <script src=@Url.Content("~/js/bootstrap-slider.min.js")></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.7.3/js/bootstrap-select.min.js"></script>
+</body>
+</html>

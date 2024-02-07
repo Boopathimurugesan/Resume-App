@@ -1,0 +1,398 @@
+﻿@using ResumeDBTracker.Business.ViewModel;
+@using X.PagedList.Mvc.Core
+@using X.PagedList;
+@using X.PagedList.Web.Common;
+@model CategoryPagingInfo
+@{
+    ViewData["Title"] = "Category Management";
+    RegisterModel registerModel = new RegisterModel();
+}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $('.deleteuser').on('click', function (e) {
+            //alert("deleteuser");
+            var id = $(this).data("id");
+            //alert(id);
+            var mydeleteId = $('#deleteuserid_' + id).data('value');
+            //alert(mydeleteId);
+            $(".modal-body #deleteId").val(mydeleteId);
+            $('#deleteModal').modal('show');
+        });
+
+        $('.editcategory').on('click', function (e) {
+            var id = $(this).data("id");
+            var categoryname = $('#editcategoryid_' + id).data('name');
+            var categoryid = $('#editcategoryid_' + id).data('category_id');
+            $(".modal-body #Editcategoryname").val(categoryname);
+            $(".modal-body #Editcategoryid").val(categoryid);
+            $('#editModal').modal('show');
+        });
+    });
+</script>
+<script>
+    $(document).ready(function () {
+        $('#updatebtn').on('click', function (e) {
+            // Initialization
+            var categoryname = $(".modal-body #Editcategoryname").val();
+            var categoryid = $(".modal-body #Editcategoryid").val();
+            
+            //Ajax call
+            $.ajax(
+                {
+                    type: 'POST',
+                    dataType: 'JSON',
+                    url: '@Url.Action("UpdateCategory")',
+                    data: { categoryname: categoryname, categoryid: categoryid },
+                    success:
+                        function (response) {
+                            alert("Updated Successfully");
+                            var host = window.location.host;
+                            //alert(host);
+                            var path = "@Url.Action("CategoryManagement")";
+                            //alert(path);
+                            window.location.pathname = path;
+                            var url = host + path;
+                            //alert(url);
+                            window.location(url);
+                        },
+                    error:
+                        function (response) {
+                            alert("Update Failed");
+                        }
+                });
+        });
+    });
+
+    $(document).ready(function () {
+        $('#addbtn').on('click', function (e) {
+            // Initialization
+            var password = $(".modal-body #Addpassword").val();
+            //alert(password);
+            var firstname = $(".modal-body #Addfirstname").val();
+            var lastname = $(".modal-body #Addlastname").val();
+            var email = $(".modal-body #Addemail").val();
+
+            //Ajax call
+            $.ajax(
+                {
+                    type: 'POST',
+                    dataType: 'json',
+                    url: '@Url.Action("InsertUser")',
+                    data: { password: password, firstname: firstname, lastname: lastname, emailadd: email },
+                    success:
+                        function (response) {
+                            // alert("success");
+                            var returnedData = jQuery.parseJSON(response);
+                            if (returnedData == "1") {
+                                alert("User Already Existed!");
+                            }
+                            else {
+                                alert("Inserted Successfully");
+                                var host = window.location.host;
+                                var path = "@Url.Action("UserManagement")";
+                                window.location.pathname = path;
+                                var url = host + path;
+                                window.location(url);
+                            }
+                        },
+                    error:
+                        function (response) {
+                            alert("Insert Failed");
+                        }
+                });
+        });
+    });
+
+
+    $(document).ready(function () {
+        $('#deletebtn').on('click', function (e) {
+            // Initialization
+            var txt = $(".modal-body #deleteId").val();
+
+            //Ajax call
+            $.ajax(
+                {
+                    type: 'POST',
+                    dataType: 'json',
+                    url: '@Url.Action("DeleteUser")',
+                    data: { id: txt },
+                    success:
+                        function (response) {
+                            alert("Deleted Successfully");
+                            var host = window.location.host;
+                            //alert(host);
+                            var path = "@Url.Action("UserManagement")";
+                            //alert(path);
+                            window.location.pathname = path;
+                            var url = host + path;
+                            //alert(url);
+                            window.location(url);
+                        },
+                    error:
+                        function (response) {
+                            alert("Delete Failed");
+                        }
+                });
+        });
+    });
+</script>
+<script type="text/javascript">
+    function delete_click() {
+        var host = window.location.host;
+        //alert(host);
+        var txt = $(".modal-body #deleteId").val();
+        var ArrNames1 = "@Url.Action("DeleteUser")";
+        //alert(ArrNames1);
+        var ArrNames = ArrNames1.split('/');
+        var controller = ArrNames[1];
+        //alert(controller);
+        var Action = ArrNames[2];
+        //alert(Action);
+        var path = "/" + controller + "/" + Action + "/" + txt;
+        //alert(path);
+        window.location.pathname = path;
+        var url = host + path;
+        //alert(url);
+        window.location(url);
+        //var str=String(path.replace(txt, "");
+    }
+</script>
+<div class="container">
+
+    <!--header-->
+    <div class="row">
+        <div class="col-12">
+            <div class="heading">
+                <h4> @ViewData["Title"] </h4>
+            </div>
+        </div>
+    </div>
+
+    <!-- bind Grid-->
+    @if (Model != null)
+    {
+        //int? i = (@Model.page * @Model.pageSize) - @Model.pageSize;
+        int? i = 1;
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-12">
+                <div>
+                    <div class="midContent">
+
+                        @if (EmailData.email == "admin@gmail.com")
+                        {
+                            <div class="tableName">
+                                <h6 class="poppins">All </h6>
+                                @* <a href="#addModal" data-bs-toggle="modal" class="btn"><i data-feather="plus"></i> Add User</a> *@
+                            </div>
+                        }
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th class="countNo">Sr&nbsp;No</th>
+                                        <th>Category&nbsp;Details</th>
+                                        <th class="text-center">Candidate Count</th>
+                                        <th class="action">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var cat in Model.CategoryList)
+                                    {
+                                        <tr>
+                                            <td class="text-center"><div class="srno">@i</div></td>
+                                            <td class="authorTd">
+                                                @*<div class="row g-0 gx-2 align-items-left">*@
+                                                @* <div class="col-auto">
+                                        <div class="testiImage">
+                                        <a href="/img/abdul.jpg" target="_blank" class="imgTable">
+                                        <img src="/img/abdul.jpg" alt="" class="img-fluid" />
+                                        </a> 
+                                        </div>
+                                        </div>*@
+                                                @*<div class="col">*@
+                                                <span class="poppins">@cat.name</span>                                                
+                                                @*</div>*@
+                                                @*</div>*@
+                                            </td>
+                                            <td class="text-center">
+                                                <span class="poppins">@cat.candidate_count</span>
+                                            </td>
+                                            <td class="action">
+                                                @* <a href="#viewModal" data-bs-toggle="modal" title="View user"><i data-feather="eye"></i></a> *@
+                                                <a class="editcategory" id="editcategoryid_@i" data-id="@i" data-bs-toggle="modal" 
+                                                    data-name="@cat.name"
+                                                    data-categoryid="@cat.category_id" 
+                                                    title="Edit Category">
+                                                    <i data-feather="edit-2"></i>
+                                                </a>
+
+                                                @if (EmailData.email == "admin@gmail.com")
+                                                {
+                                                    <a class="deleteuser" id="deleteuserid_@i" data-id="@i" 
+                                                        data-value="@cat.category_id" 
+                                                        data-bs-toggle="modal" title="Delete user"><i data-feather="trash"></i></a>
+                                                
+                                                }
+                                            </td>
+                                        </tr>
+
+                                        i++;
+                                    }
+                                </tbody>
+                            </table>
+
+                            @*<table>
+
+                        <tr>
+                        <nav aria-label="pagination">
+                        <ul class="pagination">
+                        @if (Model != null)
+                        {
+                        @Html.PagedListPager((IPagedList)Model.CandidateList,
+                        page=> Url.Action("CandidateList",new { page=page}),
+                        PagedListRenderOptions.ClassicPlusFirstAndLast)
+                        }
+                        </ul>
+                        </nav>
+                        </tr>
+                        </table>*@
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+
+    <!-- Add USer Modal -->
+    <div class="modal" id="addModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+         aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h5>Add New User</h5>
+                    @*                    <form action="" method="post" enctype="multipart/form-data">*@
+                    <div class="form-group row">
+                        <div class="col-12 mb-3">
+                            <input type="text" id="Addfirstname" name="firstname" class="form-control" placeholder="First Name" required="required" />
+                        </div>
+                        <div class="col-12 mb-3">
+                            <input type="text" id="Addlastname" name="lastname" class="form-control" placeholder="Last Name" required="required" />
+                        </div>
+                        <div class="col-12 mb-3">
+                            <input type="text" id="Addemail" name="email" class="form-control" placeholder="email" required="required" />
+                        </div>
+                        <div class="col-12 mb-3">
+                            <input type="password" id="Addpassword" name="password" class="form-control" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" placeholder="password" required="required" />
+                        </div>
+                        <div class="col-12 mb-3">
+                            <input type="password" name="confirmpassword" id="confirmpassword" class="form-control" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" placeholder="Confirm password" required="required" />
+                            <span id='message'></span>
+                        </div>
+                        <div class="col-12 text-end">
+                            <button type="submit" name="submit" class="btn btn-green" id="addbtn">Submit</button>
+                        </div>
+                        @if (ViewBag.count == 1)
+                        {
+                            <p style="color:red"> User Already Existed! </p>
+                        }
+                        else if (ViewBag.count == 0)
+                        {
+                            <p style="color:red"> Inserted Successfully! </p>
+                        }
+                    </div>
+                    @*</form>*@
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="deleteModal" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body text-center">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h5>Are you sure?</h5>
+                    <p>Do you really want to delete this user? This <br>process can not be undone.</p>
+                    <div class="row justify-content-center mt-4">
+                        <div class="col-auto">
+                            <input type="text" name="deleteId" id="deleteId" value="" style="display:none;" />
+                            <input type="button" value="Yes" id="deletebtn" class="btn btn-green active" /> @*onclick="delete_click()"*@
+                        </div>
+                        <div class="col-auto">
+                            <button type="submit" name="submit" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close">No</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="editModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+         aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h5>Edit Category</h5>
+                    @*<form action="" method="post" enctype="multipart/form-data">*@
+                    <div class="form-group row">
+                      
+                        <div class="col-12 mb-3">
+                            <input type="hidden" name="categoryid" value="" id="categoryid" />
+                            <input type="text" name="name" value="" id="name" class="form-control" placeholder="CategoryName" required="required" />
+                        </div>
+
+                        <div class="col-12 text-end">
+                            <button type="button" name="submit" id="updatebtn" class="btn btn-green">Submit</button>
+                        </div>
+                    </div>
+                    @*</form>*@
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="viewModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+         aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h5>Edit User</h5>
+                    @*<form action="" method="post" enctype="multipart/form-data">*@
+                    <div class="form-group row">
+                        <div class="col-12 mb-3">
+                            <input type="text" name="first_name" class="form-control" placeholder="First Name" required="required" />
+                        </div>
+                        <div class="col-12 mb-3">
+                            <input type="text" name="last_name" class="form-control" placeholder="Last Name" required="required" />
+                        </div>
+                        <div class="col-12 mb-3">
+                            <input type="text" name="email" class="form-control" placeholder="email" required="required" />
+                        </div>
+                    </div>
+                    @* </form>*@
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $('#Addpassword, #confirmpassword').on('keyup', function () {
+        if ($('#Addpassword').val() == $('#confirmpassword').val()) {
+            $('#message').html('Matching').css('color', 'green');
+        } else
+            $('#message').html('Not Matching').css('color', 'red');
+    });
+</script>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+
+
+<dataConfig>
+  <dataSource  type="JdbcDataSource"
+              driver="com.microsoft.sqlserver.jdbc.SQLServerDriver"
+              url="jdbc:sqlserver://SKYBRIDGE\SQLEXPRESS;databaseName=TheLeapEdge"
+              user="sa"
+              password="sqlserver"/>
+  <document>
+    <entity name="Jobseeker" pk="Jobseeker_Id"
+      query="SELECT * FROM Jobseeker_Summary"
+      deltaImportQuery="select * from Jobseeker_Summary where Jobseeker_Id='${dih.delta.Jobseeker_Id}'"
+	    deltaQuery="select Jobseeker_Id from Jobseeker_Summary where Modified_Date > convert(datetime,'${dih.last_index_time}')">
+       <!--deletedPkQuery="SELECT deleted_id as id FROM deletes WHERE deleted_at > '${dataimporter.last_index_time}'"-->
+      <field column="Jobseeker_Id" name="id"/>
+      <field column="Resume_Header" name="resume_header"/>
+      <field column="Resume" name="resume"/>
+      <field column="Total_Salary" name="total_salary"/>
+      <field column="Present_Location" name="present_location"/>
+      <field column="Present_Country" name="present_country"/>
+      <field column="Modified_Date" name="modified_date"/>
+    </entity>
+  </document>
+</dataConfig>

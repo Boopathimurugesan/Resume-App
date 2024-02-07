@@ -1,0 +1,27 @@
+﻿<head>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.7.3/css/bootstrap-select.min.css" />
+
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+<script src = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.7.3/js/bootstrap-select.min.js"></script>
+</head>
+<body>
+<select id="myselect" name="myselect[]" data-live-search="true" multiple>
+    <option value=""></option>
+    <option value="1">red</option>
+    <option value="2">orange</option>
+    <option value="3">green</option>
+    <option value="4">blue</option>
+</select>
+    <button id="btnsearch" type='button' title="search">search</button>
+<script>
+    $(function ()   {
+        $('#btnsearch').click(function () {
+            alert('btnsearch1');
+            $('#myselect').selectpicker();
+            $('#myselect').selectpicker('val', [1, 3, 4]);
+            alert('btnsearch2');
+        });
+    });
+    </script>
+</body>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<dataConfig>
+  <dataSource  type="JdbcDataSource"
+              driver="com.microsoft.sqlserver.jdbc.SQLServerDriver"
+              url="jdbc:sqlserver://SKYBRIDGE;databaseName=LocationDB"
+              user="sa"
+              password="sqlserver"/>
+	<document>
+		<entity name="PostalCodeInfo" pk="GeoID" query="SELECT * FROM PostalCodeInfo" deltaImportQuery="SELECT * FROM PostalCodeInfo">
+			<field column="GeoID" name="id"/>
+			<field column="AreaName" name="area"/>
+			<field column="Pincode" name="pincode"/>
+			<field column="DistrictName" name="district"/>
+			<field column="StateName" name="state"/>
+			<field column="Location" name="geoloc"/>
+		</entity>
+  </document>
+</dataConfig>

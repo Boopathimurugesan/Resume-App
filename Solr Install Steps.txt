@@ -1,0 +1,33 @@
+1)Download NSSM:
+
+Download the NSSM tool from its official website or a trusted source. It's an executable, so there's no installation process.
+
+2)Unzip NSSM:
+
+Extract the contents of the downloaded NSSM.zip file to a directory of your choice.
+
+3)Open CMD Window:
+
+Open a Command Prompt (CMD) window with administrative privileges.
+
+4)Navigate to NSSM Directory:
+
+Use the cd command to navigate to the directory where you extracted NSSM, e.g., cd c:\nssm\bin-64\. Make sure this directory contains the nssm.exe file.
+Install Solr Service:
+
+5)Install Solr Service:
+
+Copy the solr folder from this brach to "C:" drive
+
+Run the following commands one by one to install Solr as a service:
+nssm.exe install "Solr" "C:\Program Files\Java\jre-1.8\bin\java.exe" "-jar start.jar"
+nssm.exe set "Solr" AppDirectory "C:\Solr\solrsb\server"
+This will configure NSSM to create a Windows service named "Solr" using the provided Java executable and command-line arguments.
+
+6)Check Service:
+
+Open the Windows Services manager by typing "services.msc" in the Run dialog or search bar.
+Look for the service named "Solr" in the list of services. You can check if it's running and configure it further if needed.
+
+
+

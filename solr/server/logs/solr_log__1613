@@ -1,0 +1,790 @@
+INFO  - 2019-05-16 04:14:49.039; [   ] org.eclipse.jetty.server.Server; jetty-8.1.10.v20130312
+INFO  - 2019-05-16 04:14:49.070; [   ] org.eclipse.jetty.deploy.providers.ScanningAppProvider; Deployment monitor E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\contexts at interval 0
+INFO  - 2019-05-16 04:14:49.086; [   ] org.eclipse.jetty.deploy.DeploymentManager; Deployable added: E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\contexts\solr-jetty-context.xml
+INFO  - 2019-05-16 04:15:19.908; [   ] org.eclipse.jetty.webapp.StandardDescriptorProcessor; NO JSP Support for /solr, did not find org.apache.jasper.servlet.JspServlet
+INFO  - 2019-05-16 04:15:20.297; [   ] org.apache.solr.servlet.SolrDispatchFilter; SolrDispatchFilter.init()WebAppClassLoader=738433734@2c039ac6
+INFO  - 2019-05-16 04:15:20.582; [   ] org.apache.solr.core.SolrResourceLoader; JNDI not configured for solr (NoInitialContextEx)
+INFO  - 2019-05-16 04:15:20.582; [   ] org.apache.solr.core.SolrResourceLoader; using system property solr.solr.home: E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr
+INFO  - 2019-05-16 04:15:20.614; [   ] org.apache.solr.core.SolrResourceLoader; new SolrResourceLoader for directory: 'E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\'
+INFO  - 2019-05-16 04:15:21.489; [   ] org.apache.solr.core.SolrXmlConfig; Loading container configuration from E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\solr.xml
+INFO  - 2019-05-16 04:15:22.317; [   ] org.apache.solr.core.CorePropertiesLocator; Config-defined core root directory: E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr
+INFO  - 2019-05-16 04:15:22.442; [   ] org.apache.solr.core.CoreContainer; New CoreContainer 1426963578
+INFO  - 2019-05-16 04:15:22.442; [   ] org.apache.solr.core.CoreContainer; Loading cores into CoreContainer [instanceDir=E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\]
+INFO  - 2019-05-16 04:15:22.442; [   ] org.apache.solr.core.CoreContainer; loading shared library: E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\lib
+WARN  - 2019-05-16 04:15:22.442; [   ] org.apache.solr.core.SolrResourceLoader; Can't find (or read) directory to add to classloader: lib (resolved as: E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\lib).
+INFO  - 2019-05-16 04:15:22.598; [   ] org.apache.solr.handler.component.HttpShardHandlerFactory; Setting socketTimeout to: 600000
+INFO  - 2019-05-16 04:15:22.614; [   ] org.apache.solr.handler.component.HttpShardHandlerFactory; Setting urlScheme to: null
+INFO  - 2019-05-16 04:15:22.629; [   ] org.apache.solr.handler.component.HttpShardHandlerFactory; Setting connTimeout to: 60000
+INFO  - 2019-05-16 04:15:22.629; [   ] org.apache.solr.handler.component.HttpShardHandlerFactory; Setting maxConnectionsPerHost to: 20
+INFO  - 2019-05-16 04:15:22.629; [   ] org.apache.solr.handler.component.HttpShardHandlerFactory; Setting maxConnections to: 10000
+INFO  - 2019-05-16 04:15:22.629; [   ] org.apache.solr.handler.component.HttpShardHandlerFactory; Setting corePoolSize to: 0
+INFO  - 2019-05-16 04:15:22.629; [   ] org.apache.solr.handler.component.HttpShardHandlerFactory; Setting maximumPoolSize to: 2147483647
+INFO  - 2019-05-16 04:15:22.645; [   ] org.apache.solr.handler.component.HttpShardHandlerFactory; Setting maxThreadIdleTime to: 5
+INFO  - 2019-05-16 04:15:22.645; [   ] org.apache.solr.handler.component.HttpShardHandlerFactory; Setting sizeOfQueue to: -1
+INFO  - 2019-05-16 04:15:22.645; [   ] org.apache.solr.handler.component.HttpShardHandlerFactory; Setting fairnessPolicy to: false
+INFO  - 2019-05-16 04:15:22.645; [   ] org.apache.solr.handler.component.HttpShardHandlerFactory; Setting useRetries to: false
+INFO  - 2019-05-16 04:15:24.364; [   ] org.apache.solr.update.UpdateShardHandler; Creating UpdateShardHandler HTTP client with params: socketTimeout=600000&connTimeout=60000&retry=true
+INFO  - 2019-05-16 04:15:24.379; [   ] org.apache.solr.logging.LogWatcher; SLF4J impl is org.slf4j.impl.Log4jLoggerFactory
+INFO  - 2019-05-16 04:15:24.379; [   ] org.apache.solr.logging.LogWatcher; Registering Log Listener [Log4j (org.slf4j.impl.Log4jLoggerFactory)]
+INFO  - 2019-05-16 04:15:24.379; [   ] org.apache.solr.core.CoreContainer; Node Name: 
+INFO  - 2019-05-16 04:15:24.848; [   ] org.apache.solr.core.CorePropertiesLocator; Looking for core definitions underneath E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr
+INFO  - 2019-05-16 04:15:25.785; [   ] org.apache.solr.core.CoreDescriptor; CORE DESCRIPTOR: {name=LiveSearchJobs, config=solrconfig.xml, instanceDir=E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\LiveSearchJobs, loadOnStartup=true, absoluteInstDir=E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\LiveSearchJobs\, schema=schema.xml, transient=false, dataDir=data\}
+INFO  - 2019-05-16 04:15:25.785; [   ] org.apache.solr.core.CorePropertiesLocator; Found core LiveSearchJobs in E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\LiveSearchJobs\
+INFO  - 2019-05-16 04:15:25.895; [   ] org.apache.solr.core.CoreDescriptor; CORE DESCRIPTOR: {name=LiveSearchJobseeker, config=solrconfig.xml, instanceDir=E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\LiveSearchJobseeker, loadOnStartup=true, absoluteInstDir=E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\LiveSearchJobseeker\, schema=schema.xml, transient=false, dataDir=data\}
+INFO  - 2019-05-16 04:15:25.895; [   ] org.apache.solr.core.CorePropertiesLocator; Found core LiveSearchJobseeker in E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\LiveSearchJobseeker\
+INFO  - 2019-05-16 04:15:26.082; [   ] org.apache.solr.core.CoreDescriptor; CORE DESCRIPTOR: {name=LiveSearchRecruiter, config=solrconfig.xml, instanceDir=E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\LiveSearchRecruiter, loadOnStartup=true, absoluteInstDir=E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\LiveSearchRecruiter\, schema=schema.xml, transient=false, dataDir=data\}
+INFO  - 2019-05-16 04:15:26.082; [   ] org.apache.solr.core.CorePropertiesLocator; Found core LiveSearchRecruiter in E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\LiveSearchRecruiter\
+INFO  - 2019-05-16 04:15:26.285; [   ] org.apache.solr.core.CoreDescriptor; CORE DESCRIPTOR: {name=SearchJobs, config=solrconfig.xml, instanceDir=E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\SearchJobs, loadOnStartup=true, absoluteInstDir=E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\SearchJobs\, schema=schema.xml, transient=false, dataDir=data\}
+INFO  - 2019-05-16 04:15:26.285; [   ] org.apache.solr.core.CorePropertiesLocator; Found core SearchJobs in E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\SearchJobs\
+INFO  - 2019-05-16 04:15:26.301; [   ] org.apache.solr.core.CoreDescriptor; CORE DESCRIPTOR: {name=SearchJobseeker, config=solrconfig.xml, instanceDir=E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\SearchJobseeker, loadOnStartup=true, absoluteInstDir=E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\SearchJobseeker\, schema=schema.xml, transient=false, dataDir=data\}
+INFO  - 2019-05-16 04:15:26.301; [   ] org.apache.solr.core.CorePropertiesLocator; Found core SearchJobseeker in E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\SearchJobseeker\
+INFO  - 2019-05-16 04:15:26.489; [   ] org.apache.solr.core.CoreDescriptor; CORE DESCRIPTOR: {name=SearchRecruiter, config=solrconfig.xml, instanceDir=E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\SearchRecruiter, loadOnStartup=true, absoluteInstDir=E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\SearchRecruiter\, schema=schema.xml, transient=false, dataDir=data\}
+INFO  - 2019-05-16 04:15:26.489; [   ] org.apache.solr.core.CorePropertiesLocator; Found core SearchRecruiter in E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\SearchRecruiter\
+INFO  - 2019-05-16 04:15:26.489; [   ] org.apache.solr.core.CorePropertiesLocator; Found 6 core definitions
+INFO  - 2019-05-16 04:15:26.707; [   ] org.apache.solr.core.SolrResourceLoader; new SolrResourceLoader for directory: 'E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\LiveSearchJobs\'
+INFO  - 2019-05-16 04:15:26.707; [   ] org.apache.solr.core.SolrResourceLoader; new SolrResourceLoader for directory: 'E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\LiveSearchRecruiter\'
+INFO  - 2019-05-16 04:15:26.707; [   ] org.apache.solr.core.SolrResourceLoader; new SolrResourceLoader for directory: 'E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\LiveSearchJobseeker\'
+INFO  - 2019-05-16 04:15:27.379; [   ] org.apache.solr.core.SolrConfig; current version of requestparams : -1
+INFO  - 2019-05-16 04:15:27.379; [   ] org.apache.solr.core.SolrConfig; current version of requestparams : -1
+INFO  - 2019-05-16 04:15:27.379; [   ] org.apache.solr.core.SolrConfig; current version of requestparams : -1
+INFO  - 2019-05-16 04:15:27.379; [   ] org.apache.solr.core.SolrConfig; Adding specified lib dirs to ClassLoader
+INFO  - 2019-05-16 04:15:27.379; [   ] org.apache.solr.core.SolrConfig; Adding specified lib dirs to ClassLoader
+INFO  - 2019-05-16 04:15:27.379; [   ] org.apache.solr.core.SolrConfig; Adding specified lib dirs to ClassLoader
+INFO  - 2019-05-16 04:15:27.582; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/dist/solr-dataimporthandler-5.1.0.jar' to classloader
+INFO  - 2019-05-16 04:15:27.582; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/dist/solr-dataimporthandler-5.1.0.jar' to classloader
+INFO  - 2019-05-16 04:15:27.582; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/dist/solr-dataimporthandler-5.1.0.jar' to classloader
+INFO  - 2019-05-16 04:15:27.582; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/dist/solr-dataimporthandler-extras-5.1.0.jar' to classloader
+INFO  - 2019-05-16 04:15:27.582; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/dist/solr-dataimporthandler-extras-5.1.0.jar' to classloader
+INFO  - 2019-05-16 04:15:27.582; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/dist/solr-dataimporthandler-extras-5.1.0.jar' to classloader
+INFO  - 2019-05-16 04:15:27.629; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/dist/sqljdbc4.jar' to classloader
+INFO  - 2019-05-16 04:15:27.629; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/dist/sqljdbc4.jar' to classloader
+INFO  - 2019-05-16 04:15:27.629; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/dist/sqljdbc4.jar' to classloader
+INFO  - 2019-05-16 04:15:27.864; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/apache-mime4j-core-0.7.2.jar' to classloader
+INFO  - 2019-05-16 04:15:27.864; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/apache-mime4j-core-0.7.2.jar' to classloader
+INFO  - 2019-05-16 04:15:27.864; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/apache-mime4j-core-0.7.2.jar' to classloader
+INFO  - 2019-05-16 04:15:27.864; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/apache-mime4j-dom-0.7.2.jar' to classloader
+INFO  - 2019-05-16 04:15:27.864; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/aspectjrt-1.8.0.jar' to classloader
+INFO  - 2019-05-16 04:15:27.864; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/apache-mime4j-dom-0.7.2.jar' to classloader
+INFO  - 2019-05-16 04:15:27.864; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/apache-mime4j-dom-0.7.2.jar' to classloader
+INFO  - 2019-05-16 04:15:27.879; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/aspectjrt-1.8.0.jar' to classloader
+INFO  - 2019-05-16 04:15:27.879; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/bcmail-jdk15-1.45.jar' to classloader
+INFO  - 2019-05-16 04:15:27.879; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/bcmail-jdk15-1.45.jar' to classloader
+INFO  - 2019-05-16 04:15:27.879; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/aspectjrt-1.8.0.jar' to classloader
+INFO  - 2019-05-16 04:15:27.879; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/bcprov-jdk15-1.45.jar' to classloader
+INFO  - 2019-05-16 04:15:27.879; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/bcprov-jdk15-1.45.jar' to classloader
+INFO  - 2019-05-16 04:15:27.879; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/bcmail-jdk15-1.45.jar' to classloader
+INFO  - 2019-05-16 04:15:27.879; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/boilerpipe-1.1.0.jar' to classloader
+INFO  - 2019-05-16 04:15:27.879; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/boilerpipe-1.1.0.jar' to classloader
+INFO  - 2019-05-16 04:15:27.879; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/commons-compress-1.8.1.jar' to classloader
+INFO  - 2019-05-16 04:15:27.879; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/bcprov-jdk15-1.45.jar' to classloader
+INFO  - 2019-05-16 04:15:27.879; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/fontbox-1.8.8.jar' to classloader
+INFO  - 2019-05-16 04:15:27.879; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/commons-compress-1.8.1.jar' to classloader
+INFO  - 2019-05-16 04:15:27.879; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/icu4j-54.1.jar' to classloader
+INFO  - 2019-05-16 04:15:27.879; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/boilerpipe-1.1.0.jar' to classloader
+INFO  - 2019-05-16 04:15:27.879; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/fontbox-1.8.8.jar' to classloader
+INFO  - 2019-05-16 04:15:27.879; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/isoparser-1.0.2.jar' to classloader
+INFO  - 2019-05-16 04:15:27.879; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/icu4j-54.1.jar' to classloader
+INFO  - 2019-05-16 04:15:27.879; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/commons-compress-1.8.1.jar' to classloader
+INFO  - 2019-05-16 04:15:27.879; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/isoparser-1.0.2.jar' to classloader
+INFO  - 2019-05-16 04:15:27.879; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/java-libpst-0.8.1.jar' to classloader
+INFO  - 2019-05-16 04:15:27.879; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/java-libpst-0.8.1.jar' to classloader
+INFO  - 2019-05-16 04:15:27.879; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/fontbox-1.8.8.jar' to classloader
+INFO  - 2019-05-16 04:15:27.879; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/jdom-1.0.jar' to classloader
+INFO  - 2019-05-16 04:15:27.879; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/jdom-1.0.jar' to classloader
+INFO  - 2019-05-16 04:15:27.879; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/jempbox-1.8.8.jar' to classloader
+INFO  - 2019-05-16 04:15:27.879; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/icu4j-54.1.jar' to classloader
+INFO  - 2019-05-16 04:15:27.879; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/jmatio-1.0.jar' to classloader
+INFO  - 2019-05-16 04:15:27.879; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/jempbox-1.8.8.jar' to classloader
+INFO  - 2019-05-16 04:15:27.879; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/juniversalchardet-1.0.3.jar' to classloader
+INFO  - 2019-05-16 04:15:27.879; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/isoparser-1.0.2.jar' to classloader
+INFO  - 2019-05-16 04:15:27.895; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/metadata-extractor-2.6.2.jar' to classloader
+INFO  - 2019-05-16 04:15:27.879; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/jmatio-1.0.jar' to classloader
+INFO  - 2019-05-16 04:15:27.895; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/pdfbox-1.8.8.jar' to classloader
+INFO  - 2019-05-16 04:15:27.895; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/java-libpst-0.8.1.jar' to classloader
+INFO  - 2019-05-16 04:15:27.895; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/poi-3.11.jar' to classloader
+INFO  - 2019-05-16 04:15:27.895; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/juniversalchardet-1.0.3.jar' to classloader
+INFO  - 2019-05-16 04:15:27.895; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/poi-ooxml-3.11.jar' to classloader
+INFO  - 2019-05-16 04:15:27.895; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/jdom-1.0.jar' to classloader
+INFO  - 2019-05-16 04:15:27.895; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/poi-ooxml-schemas-3.11.jar' to classloader
+INFO  - 2019-05-16 04:15:27.895; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/metadata-extractor-2.6.2.jar' to classloader
+INFO  - 2019-05-16 04:15:27.895; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/poi-scratchpad-3.11.jar' to classloader
+INFO  - 2019-05-16 04:15:27.895; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/jempbox-1.8.8.jar' to classloader
+INFO  - 2019-05-16 04:15:27.895; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/rome-1.0.jar' to classloader
+INFO  - 2019-05-16 04:15:27.895; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/pdfbox-1.8.8.jar' to classloader
+INFO  - 2019-05-16 04:15:27.895; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/tagsoup-1.2.1.jar' to classloader
+INFO  - 2019-05-16 04:15:27.895; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/jmatio-1.0.jar' to classloader
+INFO  - 2019-05-16 04:15:27.895; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/tika-core-1.7.jar' to classloader
+INFO  - 2019-05-16 04:15:27.895; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/poi-3.11.jar' to classloader
+INFO  - 2019-05-16 04:15:27.895; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/tika-java7-1.7.jar' to classloader
+INFO  - 2019-05-16 04:15:27.895; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/juniversalchardet-1.0.3.jar' to classloader
+INFO  - 2019-05-16 04:15:27.895; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/tika-parsers-1.7.jar' to classloader
+INFO  - 2019-05-16 04:15:27.895; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/poi-ooxml-3.11.jar' to classloader
+INFO  - 2019-05-16 04:15:27.895; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/tika-xmp-1.7.jar' to classloader
+INFO  - 2019-05-16 04:15:27.895; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/metadata-extractor-2.6.2.jar' to classloader
+INFO  - 2019-05-16 04:15:27.895; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/vorbis-java-core-0.6.jar' to classloader
+INFO  - 2019-05-16 04:15:27.895; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/poi-ooxml-schemas-3.11.jar' to classloader
+INFO  - 2019-05-16 04:15:27.895; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/vorbis-java-tika-0.6.jar' to classloader
+INFO  - 2019-05-16 04:15:27.895; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/pdfbox-1.8.8.jar' to classloader
+INFO  - 2019-05-16 04:15:27.895; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/poi-scratchpad-3.11.jar' to classloader
+INFO  - 2019-05-16 04:15:27.910; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/poi-3.11.jar' to classloader
+INFO  - 2019-05-16 04:15:27.910; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/xercesImpl-2.9.1.jar' to classloader
+INFO  - 2019-05-16 04:15:27.910; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/poi-ooxml-3.11.jar' to classloader
+INFO  - 2019-05-16 04:15:27.910; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/rome-1.0.jar' to classloader
+INFO  - 2019-05-16 04:15:27.910; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/poi-ooxml-schemas-3.11.jar' to classloader
+INFO  - 2019-05-16 04:15:27.910; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/xmlbeans-2.6.0.jar' to classloader
+INFO  - 2019-05-16 04:15:27.910; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/poi-scratchpad-3.11.jar' to classloader
+INFO  - 2019-05-16 04:15:27.910; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/tagsoup-1.2.1.jar' to classloader
+INFO  - 2019-05-16 04:15:27.910; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/rome-1.0.jar' to classloader
+INFO  - 2019-05-16 04:15:27.910; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/xmpcore-5.1.2.jar' to classloader
+INFO  - 2019-05-16 04:15:27.910; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/tagsoup-1.2.1.jar' to classloader
+INFO  - 2019-05-16 04:15:27.910; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/tika-core-1.7.jar' to classloader
+INFO  - 2019-05-16 04:15:27.910; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/xz-1.5.jar' to classloader
+INFO  - 2019-05-16 04:15:27.910; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/tika-core-1.7.jar' to classloader
+INFO  - 2019-05-16 04:15:27.910; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/tika-java7-1.7.jar' to classloader
+INFO  - 2019-05-16 04:15:27.926; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/tika-java7-1.7.jar' to classloader
+INFO  - 2019-05-16 04:15:27.926; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/dist/solr-cell-5.1.0.jar' to classloader
+INFO  - 2019-05-16 04:15:27.926; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/tika-parsers-1.7.jar' to classloader
+INFO  - 2019-05-16 04:15:27.926; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/tika-parsers-1.7.jar' to classloader
+INFO  - 2019-05-16 04:15:27.926; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/tika-xmp-1.7.jar' to classloader
+INFO  - 2019-05-16 04:15:27.926; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/tika-xmp-1.7.jar' to classloader
+INFO  - 2019-05-16 04:15:27.926; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/vorbis-java-core-0.6.jar' to classloader
+INFO  - 2019-05-16 04:15:27.926; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/vorbis-java-core-0.6.jar' to classloader
+INFO  - 2019-05-16 04:15:27.926; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/vorbis-java-tika-0.6.jar' to classloader
+INFO  - 2019-05-16 04:15:27.926; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/vorbis-java-tika-0.6.jar' to classloader
+INFO  - 2019-05-16 04:15:27.926; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/xercesImpl-2.9.1.jar' to classloader
+INFO  - 2019-05-16 04:15:27.926; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/xercesImpl-2.9.1.jar' to classloader
+INFO  - 2019-05-16 04:15:27.926; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/xmlbeans-2.6.0.jar' to classloader
+INFO  - 2019-05-16 04:15:27.926; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/xmlbeans-2.6.0.jar' to classloader
+INFO  - 2019-05-16 04:15:27.926; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/xmpcore-5.1.2.jar' to classloader
+INFO  - 2019-05-16 04:15:27.926; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/xz-1.5.jar' to classloader
+INFO  - 2019-05-16 04:15:27.926; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/xmpcore-5.1.2.jar' to classloader
+INFO  - 2019-05-16 04:15:27.926; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/dist/solr-cell-5.1.0.jar' to classloader
+INFO  - 2019-05-16 04:15:27.926; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/xz-1.5.jar' to classloader
+INFO  - 2019-05-16 04:15:27.926; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/dist/solr-cell-5.1.0.jar' to classloader
+INFO  - 2019-05-16 04:15:27.989; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/clustering/lib/attributes-binder-1.2.1.jar' to classloader
+INFO  - 2019-05-16 04:15:27.989; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/clustering/lib/attributes-binder-1.2.1.jar' to classloader
+INFO  - 2019-05-16 04:15:27.989; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/clustering/lib/attributes-binder-1.2.1.jar' to classloader
+INFO  - 2019-05-16 04:15:27.989; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/clustering/lib/carrot2-mini-3.9.0.jar' to classloader
+INFO  - 2019-05-16 04:15:27.989; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/clustering/lib/carrot2-mini-3.9.0.jar' to classloader
+INFO  - 2019-05-16 04:15:27.989; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/clustering/lib/hppc-0.5.2.jar' to classloader
+INFO  - 2019-05-16 04:15:27.989; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/clustering/lib/carrot2-mini-3.9.0.jar' to classloader
+INFO  - 2019-05-16 04:15:27.989; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/clustering/lib/hppc-0.5.2.jar' to classloader
+INFO  - 2019-05-16 04:15:27.989; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/clustering/lib/hppc-0.5.2.jar' to classloader
+INFO  - 2019-05-16 04:15:27.989; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/clustering/lib/jackson-core-asl-1.9.13.jar' to classloader
+INFO  - 2019-05-16 04:15:27.989; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/clustering/lib/jackson-core-asl-1.9.13.jar' to classloader
+INFO  - 2019-05-16 04:15:27.989; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/clustering/lib/jackson-core-asl-1.9.13.jar' to classloader
+INFO  - 2019-05-16 04:15:27.989; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/clustering/lib/jackson-mapper-asl-1.9.13.jar' to classloader
+INFO  - 2019-05-16 04:15:27.989; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/clustering/lib/jackson-mapper-asl-1.9.13.jar' to classloader
+INFO  - 2019-05-16 04:15:27.989; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/clustering/lib/jackson-mapper-asl-1.9.13.jar' to classloader
+INFO  - 2019-05-16 04:15:27.989; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/clustering/lib/mahout-collections-1.0.jar' to classloader
+INFO  - 2019-05-16 04:15:27.989; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/clustering/lib/mahout-collections-1.0.jar' to classloader
+INFO  - 2019-05-16 04:15:27.989; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/clustering/lib/mahout-collections-1.0.jar' to classloader
+INFO  - 2019-05-16 04:15:27.989; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/clustering/lib/mahout-math-0.6.jar' to classloader
+INFO  - 2019-05-16 04:15:27.989; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/clustering/lib/mahout-math-0.6.jar' to classloader
+INFO  - 2019-05-16 04:15:27.989; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/clustering/lib/simple-xml-2.7.jar' to classloader
+INFO  - 2019-05-16 04:15:27.989; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/clustering/lib/mahout-math-0.6.jar' to classloader
+INFO  - 2019-05-16 04:15:27.989; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/clustering/lib/simple-xml-2.7.jar' to classloader
+INFO  - 2019-05-16 04:15:27.989; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/clustering/lib/simple-xml-2.7.jar' to classloader
+INFO  - 2019-05-16 04:15:27.989; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/dist/solr-clustering-5.1.0.jar' to classloader
+INFO  - 2019-05-16 04:15:28.004; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/dist/solr-clustering-5.1.0.jar' to classloader
+INFO  - 2019-05-16 04:15:28.004; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/dist/solr-clustering-5.1.0.jar' to classloader
+INFO  - 2019-05-16 04:15:28.004; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/langid/lib/jsonic-1.2.7.jar' to classloader
+INFO  - 2019-05-16 04:15:28.004; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/langid/lib/jsonic-1.2.7.jar' to classloader
+INFO  - 2019-05-16 04:15:28.004; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/langid/lib/langdetect-1.1-20120112.jar' to classloader
+INFO  - 2019-05-16 04:15:28.004; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/langid/lib/jsonic-1.2.7.jar' to classloader
+INFO  - 2019-05-16 04:15:28.004; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/langid/lib/langdetect-1.1-20120112.jar' to classloader
+INFO  - 2019-05-16 04:15:28.004; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/langid/lib/langdetect-1.1-20120112.jar' to classloader
+INFO  - 2019-05-16 04:15:28.051; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/dist/solr-langid-5.1.0.jar' to classloader
+INFO  - 2019-05-16 04:15:28.051; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/dist/solr-langid-5.1.0.jar' to classloader
+INFO  - 2019-05-16 04:15:28.051; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/dist/solr-langid-5.1.0.jar' to classloader
+INFO  - 2019-05-16 04:15:28.082; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/velocity/lib/commons-beanutils-1.8.3.jar' to classloader
+INFO  - 2019-05-16 04:15:28.082; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/velocity/lib/commons-beanutils-1.8.3.jar' to classloader
+INFO  - 2019-05-16 04:15:28.082; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/velocity/lib/commons-beanutils-1.8.3.jar' to classloader
+INFO  - 2019-05-16 04:15:28.082; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/velocity/lib/commons-collections-3.2.1.jar' to classloader
+INFO  - 2019-05-16 04:15:28.082; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/velocity/lib/commons-collections-3.2.1.jar' to classloader
+INFO  - 2019-05-16 04:15:28.082; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/velocity/lib/velocity-1.7.jar' to classloader
+INFO  - 2019-05-16 04:15:28.082; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/velocity/lib/commons-collections-3.2.1.jar' to classloader
+INFO  - 2019-05-16 04:15:28.082; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/velocity/lib/velocity-tools-2.0.jar' to classloader
+INFO  - 2019-05-16 04:15:28.082; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/velocity/lib/velocity-1.7.jar' to classloader
+INFO  - 2019-05-16 04:15:28.098; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/velocity/lib/velocity-1.7.jar' to classloader
+INFO  - 2019-05-16 04:15:28.098; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/velocity/lib/velocity-tools-2.0.jar' to classloader
+INFO  - 2019-05-16 04:15:28.098; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/velocity/lib/velocity-tools-2.0.jar' to classloader
+INFO  - 2019-05-16 04:15:28.098; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/dist/solr-velocity-5.1.0.jar' to classloader
+INFO  - 2019-05-16 04:15:28.098; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/dist/solr-velocity-5.1.0.jar' to classloader
+INFO  - 2019-05-16 04:15:28.098; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/dist/solr-velocity-5.1.0.jar' to classloader
+INFO  - 2019-05-16 04:17:17.865; [   ] org.apache.solr.update.SolrIndexConfig; IndexWriter infoStream solr logging is enabled
+INFO  - 2019-05-16 04:17:17.893; [   ] org.apache.solr.update.SolrIndexConfig; IndexWriter infoStream solr logging is enabled
+INFO  - 2019-05-16 04:17:17.945; [   ] org.apache.solr.update.SolrIndexConfig; IndexWriter infoStream solr logging is enabled
+INFO  - 2019-05-16 04:17:17.977; [   ] org.apache.solr.core.SolrConfig; Using Lucene MatchVersion: 5.1.0
+INFO  - 2019-05-16 04:17:17.929; [   ] org.apache.solr.core.SolrConfig; Using Lucene MatchVersion: 5.1.0
+INFO  - 2019-05-16 04:17:17.969; [   ] org.apache.solr.core.SolrConfig; Using Lucene MatchVersion: 5.1.0
+INFO  - 2019-05-16 04:17:19.045; [   ] org.apache.solr.core.SolrConfig; Loaded SolrConfig: solrconfig.xml
+INFO  - 2019-05-16 04:17:19.045; [   ] org.apache.solr.core.SolrConfig; Loaded SolrConfig: solrconfig.xml
+INFO  - 2019-05-16 04:17:19.061; [   ] org.apache.solr.core.SolrConfig; Loaded SolrConfig: solrconfig.xml
+INFO  - 2019-05-16 04:17:20.616; [   ] org.apache.solr.schema.IndexSchema; Reading Solr Schema from E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\LiveSearchJobs\conf\schema.xml
+INFO  - 2019-05-16 04:17:20.616; [   ] org.apache.solr.schema.IndexSchema; Reading Solr Schema from E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\LiveSearchRecruiter\conf\schema.xml
+INFO  - 2019-05-16 04:17:21.092; [   ] org.apache.solr.schema.IndexSchema; [LiveSearchJobs] Schema name=example-DIH-solr
+INFO  - 2019-05-16 04:17:21.092; [   ] org.apache.solr.schema.IndexSchema; [LiveSearchRecruiter] Schema name=example-DIH-solr
+INFO  - 2019-05-16 04:17:21.252; [   ] org.apache.solr.schema.IndexSchema; Reading Solr Schema from E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\LiveSearchJobseeker\conf\schema.xml
+INFO  - 2019-05-16 04:17:21.312; [   ] org.apache.solr.schema.IndexSchema; [LiveSearchJobseeker] Schema name=example-DIH-solr
+INFO  - 2019-05-16 04:17:26.261; [   ] org.apache.solr.schema.IndexSchema; unique key field: id
+INFO  - 2019-05-16 04:17:26.261; [   ] org.apache.solr.schema.IndexSchema; unique key field: id
+WARN  - 2019-05-16 04:17:26.421; [   ] org.apache.solr.core.SolrResourceLoader; Solr loaded a deprecated plugin/analysis class [solr.ThaiWordFilterFactory]. Please consult documentation how to replace it accordingly.
+INFO  - 2019-05-16 04:17:26.445; [   ] org.apache.solr.schema.IndexSchema; unique key field: id
+INFO  - 2019-05-16 04:17:29.485; [   ] org.apache.solr.schema.FileExchangeRateProvider; Reloading exchange rates from file currency.xml
+INFO  - 2019-05-16 04:17:29.497; [   ] org.apache.solr.schema.FileExchangeRateProvider; Reloading exchange rates from file currency.xml
+INFO  - 2019-05-16 04:17:30.749; [   ] org.apache.solr.schema.FileExchangeRateProvider; Reloading exchange rates from file currency.xml
+INFO  - 2019-05-16 04:17:31.261; [   ] org.apache.solr.schema.FileExchangeRateProvider; Reloading exchange rates from file currency.xml
+INFO  - 2019-05-16 04:17:31.265; [   ] org.apache.solr.schema.FileExchangeRateProvider; Reloading exchange rates from file currency.xml
+INFO  - 2019-05-16 04:17:31.541; [   ] org.apache.solr.schema.FileExchangeRateProvider; Reloading exchange rates from file currency.xml
+INFO  - 2019-05-16 04:17:39.449; [   ] org.apache.solr.core.CoreContainer; Creating SolrCore 'LiveSearchJobseeker' using configuration from instancedir E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\LiveSearchJobseeker\
+INFO  - 2019-05-16 04:17:39.453; [   ] org.apache.solr.core.CoreContainer; Creating SolrCore 'LiveSearchRecruiter' using configuration from instancedir E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\LiveSearchRecruiter\
+INFO  - 2019-05-16 04:17:39.637; [   ] org.apache.solr.core.SolrCore; solr.NRTCachingDirectoryFactory
+INFO  - 2019-05-16 04:17:39.637; [   ] org.apache.solr.core.SolrCore; solr.NRTCachingDirectoryFactory
+INFO  - 2019-05-16 04:17:40.069; [   ] org.apache.solr.core.SolrCore; [LiveSearchJobseeker] Opening new SolrCore at E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\LiveSearchJobseeker\, dataDir=E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\LiveSearchJobseeker\data\
+INFO  - 2019-05-16 04:17:40.101; [   ] org.apache.solr.core.SolrCore; [LiveSearchRecruiter] Opening new SolrCore at E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\LiveSearchRecruiter\, dataDir=E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\LiveSearchRecruiter\data\
+INFO  - 2019-05-16 04:17:40.361; [   ] org.apache.solr.core.JmxMonitoredMap; No JMX servers found, not exposing Solr information with JMX.
+INFO  - 2019-05-16 04:17:40.361; [   ] org.apache.solr.core.JmxMonitoredMap; No JMX servers found, not exposing Solr information with JMX.
+INFO  - 2019-05-16 04:17:40.485; [   ] org.apache.solr.core.SolrCore; [LiveSearchJobseeker] Added SolrEventListener for newSearcher: org.apache.solr.core.QuerySenderListener{queries=[]}
+INFO  - 2019-05-16 04:17:40.485; [   ] org.apache.solr.core.SolrCore; [LiveSearchRecruiter] Added SolrEventListener for newSearcher: org.apache.solr.core.QuerySenderListener{queries=[]}
+INFO  - 2019-05-16 04:17:40.485; [   ] org.apache.solr.core.SolrCore; [LiveSearchJobseeker] Added SolrEventListener for firstSearcher: org.apache.solr.core.QuerySenderListener{queries=[{q=static firstSearcher warming in solrconfig.xml}]}
+INFO  - 2019-05-16 04:17:40.485; [   ] org.apache.solr.core.SolrCore; [LiveSearchRecruiter] Added SolrEventListener for firstSearcher: org.apache.solr.core.QuerySenderListener{queries=[{q=static firstSearcher warming in solrconfig.xml}]}
+INFO  - 2019-05-16 04:17:40.941; [   ] org.apache.solr.core.CachingDirectoryFactory; return new directory for E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\LiveSearchRecruiter\data
+INFO  - 2019-05-16 04:17:40.941; [   ] org.apache.solr.core.CachingDirectoryFactory; return new directory for E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\LiveSearchJobseeker\data
+INFO  - 2019-05-16 04:17:41.325; [   ] org.apache.solr.core.SolrCore; New index directory detected: old=null new=E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\LiveSearchJobseeker\data\index/
+INFO  - 2019-05-16 04:17:41.325; [   ] org.apache.solr.core.SolrCore; New index directory detected: old=null new=E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\LiveSearchRecruiter\data\index/
+INFO  - 2019-05-16 04:17:41.817; [   ] org.apache.solr.core.CachingDirectoryFactory; return new directory for E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\LiveSearchJobseeker\data\index
+INFO  - 2019-05-16 04:17:41.981; [   ] org.apache.solr.core.CachingDirectoryFactory; return new directory for E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\LiveSearchRecruiter\data\index
+INFO  - 2019-05-16 04:17:43.685; [   ] org.apache.solr.core.PluginBag; queryResponseWriter : 'velocity' created with startup=lazy 
+INFO  - 2019-05-16 04:17:43.685; [   ] org.apache.solr.core.PluginBag; queryResponseWriter : 'velocity' created with startup=lazy 
+INFO  - 2019-05-16 04:17:43.705; [   ] org.apache.solr.response.XSLTResponseWriter; xsltCacheLifetimeSeconds=5
+INFO  - 2019-05-16 04:17:43.705; [   ] org.apache.solr.response.XSLTResponseWriter; xsltCacheLifetimeSeconds=5
+INFO  - 2019-05-16 04:17:44.163; [   ] org.apache.solr.core.SolrCore; no updateRequestProcessorChain defined as default, creating implicit default
+INFO  - 2019-05-16 04:17:44.163; [   ] org.apache.solr.core.SolrCore; no updateRequestProcessorChain defined as default, creating implicit default
+INFO  - 2019-05-16 04:17:44.391; [   ] org.apache.solr.handler.loader.XMLLoader; xsltCacheLifetimeSeconds=60
+INFO  - 2019-05-16 04:17:44.391; [   ] org.apache.solr.handler.loader.XMLLoader; xsltCacheLifetimeSeconds=60
+INFO  - 2019-05-16 04:17:44.395; [   ] org.apache.solr.handler.loader.XMLLoader; xsltCacheLifetimeSeconds=60
+INFO  - 2019-05-16 04:17:44.395; [   ] org.apache.solr.handler.loader.XMLLoader; xsltCacheLifetimeSeconds=60
+INFO  - 2019-05-16 04:17:44.399; [   ] org.apache.solr.handler.loader.XMLLoader; xsltCacheLifetimeSeconds=60
+INFO  - 2019-05-16 04:17:44.399; [   ] org.apache.solr.handler.loader.XMLLoader; xsltCacheLifetimeSeconds=60
+INFO  - 2019-05-16 04:17:44.403; [   ] org.apache.solr.handler.loader.XMLLoader; xsltCacheLifetimeSeconds=60
+INFO  - 2019-05-16 04:17:44.403; [   ] org.apache.solr.handler.loader.XMLLoader; xsltCacheLifetimeSeconds=60
+INFO  - 2019-05-16 04:17:44.515; [   ] org.apache.solr.core.PluginBag; requestHandler : '/update/extract' created with startup=lazy 
+INFO  - 2019-05-16 04:17:44.519; [   ] org.apache.solr.core.PluginBag; requestHandler : '/update/extract' created with startup=lazy 
+INFO  - 2019-05-16 04:17:44.527; [   ] org.apache.solr.core.PluginBag; requestHandler : '/analysis/field' created with startup=lazy 
+INFO  - 2019-05-16 04:17:44.527; [   ] org.apache.solr.core.PluginBag; requestHandler : '/analysis/field' created with startup=lazy 
+INFO  - 2019-05-16 04:17:44.527; [   ] org.apache.solr.core.PluginBag; requestHandler : '/analysis/document' created with startup=lazy 
+INFO  - 2019-05-16 04:17:44.527; [   ] org.apache.solr.core.PluginBag; requestHandler : '/analysis/document' created with startup=lazy 
+WARN  - 2019-05-16 04:17:44.543; [   ] org.apache.solr.core.SolrResourceLoader; Solr loaded a deprecated plugin/analysis class [solr.admin.AdminHandlers]. Please consult documentation how to replace it accordingly.
+WARN  - 2019-05-16 04:17:44.551; [   ] org.apache.solr.core.SolrResourceLoader; Solr loaded a deprecated plugin/analysis class [solr.admin.AdminHandlers]. Please consult documentation how to replace it accordingly.
+INFO  - 2019-05-16 04:17:44.599; [   ] org.apache.solr.core.PluginBag; requestHandler : '/spell' created with startup=lazy 
+INFO  - 2019-05-16 04:17:44.603; [   ] org.apache.solr.core.PluginBag; requestHandler : '/spell' created with startup=lazy 
+INFO  - 2019-05-16 04:17:44.603; [   ] org.apache.solr.core.PluginBag; requestHandler : '/suggest' created with startup=lazy 
+INFO  - 2019-05-16 04:17:44.603; [   ] org.apache.solr.core.PluginBag; requestHandler : '/suggest' created with startup=lazy 
+INFO  - 2019-05-16 04:17:44.603; [   ] org.apache.solr.core.PluginBag; requestHandler : '/tvrh' created with startup=lazy 
+INFO  - 2019-05-16 04:17:44.607; [   ] org.apache.solr.core.PluginBag; requestHandler : '/tvrh' created with startup=lazy 
+INFO  - 2019-05-16 04:17:44.607; [   ] org.apache.solr.core.PluginBag; requestHandler : '/terms' created with startup=lazy 
+INFO  - 2019-05-16 04:17:44.607; [   ] org.apache.solr.core.PluginBag; requestHandler : '/terms' created with startup=lazy 
+INFO  - 2019-05-16 04:17:44.607; [   ] org.apache.solr.core.PluginBag; requestHandler : '/elevate' created with startup=lazy 
+INFO  - 2019-05-16 04:17:44.607; [   ] org.apache.solr.core.PluginBag; requestHandler : '/elevate' created with startup=lazy 
+INFO  - 2019-05-16 04:17:44.619; [   ] org.apache.solr.core.RequestHandlers; Registered paths: /admin/mbeans,/browse,/update/json/docs,/admin/luke,/get,/admin/properties,/elevate,/update/json,/admin/threads,/query,/analysis/field,/analysis/document,/spell,/update/csv,/tvrh,/select,/admin/segments,/admin/system,/suggest,/replication,/config,/schema,/admin/plugins,/admin/logging,/admin,/admin/ping,/update,/admin/file,/debug/dump,/terms,/dataimport,/update/extract
+INFO  - 2019-05-16 04:17:44.619; [   ] org.apache.solr.core.RequestHandlers; Registered paths: /admin/mbeans,/browse,/update/json/docs,/admin/luke,/get,/admin/properties,/elevate,/update/json,/admin/threads,/query,/analysis/field,/analysis/document,/spell,/update/csv,/tvrh,/select,/admin/segments,/admin/system,/suggest,/replication,/config,/schema,/admin/plugins,/admin/logging,/admin,/admin/ping,/update,/admin/file,/debug/dump,/terms,/dataimport,/update/extract
+INFO  - 2019-05-16 04:17:44.623; [   ] org.apache.solr.core.SolrCore; Using default statsCache cache: org.apache.solr.search.stats.LocalStatsCache
+INFO  - 2019-05-16 04:17:44.623; [   ] org.apache.solr.core.SolrCore; Using default statsCache cache: org.apache.solr.search.stats.LocalStatsCache
+INFO  - 2019-05-16 04:17:44.667; [   ] org.apache.solr.update.UpdateHandler; Using UpdateLog implementation: org.apache.solr.update.UpdateLog
+INFO  - 2019-05-16 04:17:44.679; [   ] org.apache.solr.update.UpdateLog; Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10
+INFO  - 2019-05-16 04:17:44.667; [   ] org.apache.solr.update.UpdateHandler; Using UpdateLog implementation: org.apache.solr.update.UpdateLog
+INFO  - 2019-05-16 04:17:44.687; [   ] org.apache.solr.update.UpdateLog; Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10
+INFO  - 2019-05-16 04:17:45.031; [   ] org.apache.solr.core.CoreContainer; Creating SolrCore 'LiveSearchJobs' using configuration from instancedir E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\LiveSearchJobs\
+INFO  - 2019-05-16 04:17:45.031; [   ] org.apache.solr.core.SolrCore; solr.NRTCachingDirectoryFactory
+INFO  - 2019-05-16 04:17:45.571; [   ] org.apache.solr.core.SolrCore; [LiveSearchJobs] Opening new SolrCore at E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\LiveSearchJobs\, dataDir=E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\LiveSearchJobs\data\
+INFO  - 2019-05-16 04:17:45.583; [   ] org.apache.solr.core.JmxMonitoredMap; No JMX servers found, not exposing Solr information with JMX.
+INFO  - 2019-05-16 04:17:45.583; [   ] org.apache.solr.core.SolrCore; [LiveSearchJobs] Added SolrEventListener for newSearcher: org.apache.solr.core.QuerySenderListener{queries=[]}
+INFO  - 2019-05-16 04:17:45.583; [   ] org.apache.solr.core.SolrCore; [LiveSearchJobs] Added SolrEventListener for firstSearcher: org.apache.solr.core.QuerySenderListener{queries=[{q=static firstSearcher warming in solrconfig.xml}]}
+INFO  - 2019-05-16 04:17:45.591; [   ] org.apache.solr.core.CachingDirectoryFactory; return new directory for E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\LiveSearchJobs\data
+INFO  - 2019-05-16 04:17:45.639; [   ] org.apache.solr.core.SolrCore; New index directory detected: old=null new=E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\LiveSearchJobs\data\index/
+INFO  - 2019-05-16 04:17:45.755; [   ] org.apache.solr.core.CachingDirectoryFactory; return new directory for E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\LiveSearchJobs\data\index
+INFO  - 2019-05-16 04:17:46.293; [   ] org.apache.solr.core.PluginBag; queryResponseWriter : 'velocity' created with startup=lazy 
+INFO  - 2019-05-16 04:17:46.293; [   ] org.apache.solr.response.XSLTResponseWriter; xsltCacheLifetimeSeconds=5
+INFO  - 2019-05-16 04:17:46.301; [   ] org.apache.solr.core.SolrCore; no updateRequestProcessorChain defined as default, creating implicit default
+INFO  - 2019-05-16 04:17:46.305; [   ] org.apache.solr.handler.loader.XMLLoader; xsltCacheLifetimeSeconds=60
+INFO  - 2019-05-16 04:17:46.309; [   ] org.apache.solr.handler.loader.XMLLoader; xsltCacheLifetimeSeconds=60
+INFO  - 2019-05-16 04:17:46.309; [   ] org.apache.solr.handler.loader.XMLLoader; xsltCacheLifetimeSeconds=60
+INFO  - 2019-05-16 04:17:46.313; [   ] org.apache.solr.handler.loader.XMLLoader; xsltCacheLifetimeSeconds=60
+INFO  - 2019-05-16 04:17:46.345; [   ] org.apache.solr.core.PluginBag; requestHandler : '/update/extract' created with startup=lazy 
+INFO  - 2019-05-16 04:17:46.349; [   ] org.apache.solr.core.PluginBag; requestHandler : '/analysis/field' created with startup=lazy 
+INFO  - 2019-05-16 04:17:46.349; [   ] org.apache.solr.core.PluginBag; requestHandler : '/analysis/document' created with startup=lazy 
+INFO  - 2019-05-16 04:17:46.349; [   ] org.apache.solr.core.PluginBag; requestHandler : '/spell' created with startup=lazy 
+INFO  - 2019-05-16 04:17:46.349; [   ] org.apache.solr.core.PluginBag; requestHandler : '/suggest' created with startup=lazy 
+INFO  - 2019-05-16 04:17:46.349; [   ] org.apache.solr.core.PluginBag; requestHandler : '/tvrh' created with startup=lazy 
+INFO  - 2019-05-16 04:17:46.349; [   ] org.apache.solr.core.PluginBag; requestHandler : '/terms' created with startup=lazy 
+INFO  - 2019-05-16 04:17:46.353; [   ] org.apache.solr.core.PluginBag; requestHandler : '/elevate' created with startup=lazy 
+INFO  - 2019-05-16 04:17:46.353; [   ] org.apache.solr.core.RequestHandlers; Registered paths: /admin/mbeans,/browse,/update/json/docs,/admin/luke,/get,/admin/properties,/elevate,/update/json,/admin/threads,/query,/analysis/field,/analysis/document,/spell,/update/csv,/tvrh,/select,/admin/segments,/admin/system,/suggest,/replication,/config,/schema,/admin/plugins,/admin/logging,/admin,/admin/ping,/update,/admin/file,/debug/dump,/terms,/dataimport,/update/extract
+INFO  - 2019-05-16 04:17:46.357; [   ] org.apache.solr.core.SolrCore; Using default statsCache cache: org.apache.solr.search.stats.LocalStatsCache
+INFO  - 2019-05-16 04:17:46.357; [   ] org.apache.solr.update.UpdateHandler; Using UpdateLog implementation: org.apache.solr.update.UpdateLog
+INFO  - 2019-05-16 04:17:46.357; [   ] org.apache.solr.update.UpdateLog; Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10
+INFO  - 2019-05-16 04:17:47.958; [   ] org.apache.solr.update.CommitTracker; Hard AutoCommit: if uncommited for 15000ms; 
+INFO  - 2019-05-16 04:17:47.958; [   ] org.apache.solr.update.CommitTracker; Hard AutoCommit: if uncommited for 15000ms; 
+INFO  - 2019-05-16 04:17:47.958; [   ] org.apache.solr.update.CommitTracker; Soft AutoCommit: disabled
+INFO  - 2019-05-16 04:17:47.958; [   ] org.apache.solr.update.CommitTracker; Soft AutoCommit: disabled
+INFO  - 2019-05-16 04:17:48.018; [   ] org.apache.solr.update.CommitTracker; Hard AutoCommit: if uncommited for 15000ms; 
+INFO  - 2019-05-16 04:17:48.018; [   ] org.apache.solr.update.CommitTracker; Soft AutoCommit: disabled
+INFO  - 2019-05-16 04:17:49.542; [   ] org.apache.solr.core.SolrDeletionPolicy; SolrDeletionPolicy.onInit: commits: num=1
+	commit{dir=NRTCachingDirectory(MMapDirectory@E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\LiveSearchRecruiter\data\index lockFactory=org.apache.lucene.store.NativeFSLockFactory@6ab400e8; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_r2,generation=974}
+INFO  - 2019-05-16 04:17:49.542; [   ] org.apache.solr.core.SolrDeletionPolicy; SolrDeletionPolicy.onInit: commits: num=1
+	commit{dir=NRTCachingDirectory(MMapDirectory@E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\LiveSearchJobseeker\data\index lockFactory=org.apache.lucene.store.NativeFSLockFactory@6ab400e8; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_im,generation=670}
+INFO  - 2019-05-16 04:17:49.542; [   ] org.apache.solr.core.SolrDeletionPolicy; SolrDeletionPolicy.onInit: commits: num=1
+	commit{dir=NRTCachingDirectory(MMapDirectory@E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\LiveSearchJobs\data\index lockFactory=org.apache.lucene.store.NativeFSLockFactory@6ab400e8; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_bm,generation=418}
+INFO  - 2019-05-16 04:17:49.546; [   ] org.apache.solr.core.SolrDeletionPolicy; newest commit generation = 670
+INFO  - 2019-05-16 04:17:49.546; [   ] org.apache.solr.core.SolrDeletionPolicy; newest commit generation = 974
+INFO  - 2019-05-16 04:17:49.546; [   ] org.apache.solr.core.SolrDeletionPolicy; newest commit generation = 418
+INFO  - 2019-05-16 04:17:50.354; [   ] org.apache.solr.search.SolrIndexSearcher; Opening Searcher@4727aa39[LiveSearchRecruiter] main
+INFO  - 2019-05-16 04:17:50.370; [   ] org.apache.solr.rest.ManagedResourceStorage$FileStorageIO; File-based storage initialized to use dir: E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\LiveSearchRecruiter\conf
+INFO  - 2019-05-16 04:17:50.370; [   ] org.apache.solr.rest.RestManager; Initializing RestManager with initArgs: {storageDir=E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\LiveSearchRecruiter\conf}
+INFO  - 2019-05-16 04:17:50.390; [   ] org.apache.solr.rest.ManagedResourceStorage; Reading _rest_managed.json using file:dir=E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\LiveSearchRecruiter\conf
+INFO  - 2019-05-16 04:17:50.394; [   ] org.apache.solr.rest.RestManager; Initializing 0 registered ManagedResources
+INFO  - 2019-05-16 04:17:50.410; [   ] org.apache.solr.handler.component.SpellCheckComponent; Initializing spell checkers
+INFO  - 2019-05-16 04:17:50.422; [   ] org.apache.solr.spelling.DirectSolrSpellChecker; init: {name=default,field=text,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+INFO  - 2019-05-16 04:17:50.434; [   ] org.apache.solr.handler.component.SpellCheckComponent; No queryConverter defined, using default converter
+INFO  - 2019-05-16 04:17:50.438; [   ] org.apache.solr.handler.component.SuggestComponent; Initializing SuggestComponent
+INFO  - 2019-05-16 04:17:50.442; [   ] org.apache.solr.spelling.suggest.SolrSuggester; init: {name=mySuggester,lookupImpl=FuzzyLookupFactory,dictionaryImpl=DocumentDictionaryFactory,field=cat,weightField=price,suggestAnalyzerFieldType=string}
+INFO  - 2019-05-16 04:17:50.466; [   ] org.apache.solr.spelling.suggest.SolrSuggester; Dictionary loaded with params: {name=mySuggester,lookupImpl=FuzzyLookupFactory,dictionaryImpl=DocumentDictionaryFactory,field=cat,weightField=price,suggestAnalyzerFieldType=string}
+INFO  - 2019-05-16 04:17:50.470; [   ] org.apache.solr.handler.component.SuggestComponent; Registering searcher listener for suggester: mySuggester - SuggesterListener [core=org.apache.solr.core.SolrCore@22b97ef8, suggester=SolrSuggester [ name=mySuggester, sourceLocation=null, storeDir=, lookupImpl=FuzzyLookupFactory, dictionaryImpl=DocumentDictionaryFactory, sizeInBytes=0 ], buildOnCommit=false, buildOnOptimize=false, buildOnStartup=true, isCoreReload=false]
+INFO  - 2019-05-16 04:17:50.470; [   ] org.apache.solr.handler.component.QueryElevationComponent; Loading QueryElevation from: E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\LiveSearchRecruiter\conf\elevate.xml
+INFO  - 2019-05-16 04:17:50.502; [   ] org.apache.solr.search.SolrIndexSearcher; Opening Searcher@7ed4457a[LiveSearchJobseeker] main
+INFO  - 2019-05-16 04:17:50.506; [   ] org.apache.solr.rest.ManagedResourceStorage$FileStorageIO; File-based storage initialized to use dir: E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\LiveSearchJobseeker\conf
+INFO  - 2019-05-16 04:17:50.506; [   ] org.apache.solr.rest.RestManager; Initializing RestManager with initArgs: {storageDir=E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\LiveSearchJobseeker\conf}
+INFO  - 2019-05-16 04:17:50.510; [   ] org.apache.solr.rest.ManagedResourceStorage; Reading _rest_managed.json using file:dir=E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\LiveSearchJobseeker\conf
+INFO  - 2019-05-16 04:17:50.510; [   ] org.apache.solr.rest.RestManager; Initializing 0 registered ManagedResources
+INFO  - 2019-05-16 04:17:50.510; [   ] org.apache.solr.handler.component.SpellCheckComponent; Initializing spell checkers
+INFO  - 2019-05-16 04:17:50.510; [   ] org.apache.solr.spelling.DirectSolrSpellChecker; init: {name=default,field=text,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+INFO  - 2019-05-16 04:17:50.510; [   ] org.apache.solr.handler.component.SpellCheckComponent; No queryConverter defined, using default converter
+INFO  - 2019-05-16 04:17:50.514; [   ] org.apache.solr.handler.component.SuggestComponent; Initializing SuggestComponent
+INFO  - 2019-05-16 04:17:50.514; [   ] org.apache.solr.spelling.suggest.SolrSuggester; init: {name=mySuggester,lookupImpl=FuzzyLookupFactory,dictionaryImpl=DocumentDictionaryFactory,field=cat,weightField=price,suggestAnalyzerFieldType=string}
+INFO  - 2019-05-16 04:17:50.514; [   ] org.apache.solr.spelling.suggest.SolrSuggester; Dictionary loaded with params: {name=mySuggester,lookupImpl=FuzzyLookupFactory,dictionaryImpl=DocumentDictionaryFactory,field=cat,weightField=price,suggestAnalyzerFieldType=string}
+INFO  - 2019-05-16 04:17:50.514; [   ] org.apache.solr.handler.component.SuggestComponent; Registering searcher listener for suggester: mySuggester - SuggesterListener [core=org.apache.solr.core.SolrCore@7315267f, suggester=SolrSuggester [ name=mySuggester, sourceLocation=null, storeDir=, lookupImpl=FuzzyLookupFactory, dictionaryImpl=DocumentDictionaryFactory, sizeInBytes=0 ], buildOnCommit=false, buildOnOptimize=false, buildOnStartup=true, isCoreReload=false]
+INFO  - 2019-05-16 04:17:50.650; [   ] org.apache.solr.handler.component.QueryElevationComponent; Loading QueryElevation from: E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\LiveSearchJobseeker\conf\elevate.xml
+INFO  - 2019-05-16 04:17:50.654; [   ] org.apache.solr.search.SolrIndexSearcher; Opening Searcher@3598922e[LiveSearchJobs] main
+INFO  - 2019-05-16 04:17:50.658; [   ] org.apache.solr.rest.ManagedResourceStorage$FileStorageIO; File-based storage initialized to use dir: E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\LiveSearchJobs\conf
+INFO  - 2019-05-16 04:17:50.766; [   ] org.apache.solr.handler.ReplicationHandler; Commits will be reserved for  10000
+INFO  - 2019-05-16 04:17:50.658; [   ] org.apache.solr.rest.RestManager; Initializing RestManager with initArgs: {storageDir=E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\LiveSearchJobs\conf}
+INFO  - 2019-05-16 04:17:50.774; [   ] org.apache.solr.rest.ManagedResourceStorage; Reading _rest_managed.json using file:dir=E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\LiveSearchJobs\conf
+INFO  - 2019-05-16 04:17:50.774; [   ] org.apache.solr.rest.RestManager; Initializing 0 registered ManagedResources
+INFO  - 2019-05-16 04:17:50.774; [   ] org.apache.solr.handler.component.SpellCheckComponent; Initializing spell checkers
+INFO  - 2019-05-16 04:17:50.782; [   ] org.apache.solr.spelling.DirectSolrSpellChecker; init: {name=default,field=text,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+INFO  - 2019-05-16 04:17:50.786; [   ] org.apache.solr.handler.component.SpellCheckComponent; No queryConverter defined, using default converter
+WARN  - 2019-05-16 04:17:50.786; [   ] org.apache.solr.handler.admin.AdminHandlers; <requestHandler name="/admin/" 
+ class="solr.admin.AdminHandlers" /> is deprecated . It is not required anymore
+INFO  - 2019-05-16 04:17:50.786; [   ] org.apache.solr.handler.component.SuggestComponent; Initializing SuggestComponent
+INFO  - 2019-05-16 04:17:50.786; [   ] org.apache.solr.spelling.suggest.SolrSuggester; init: {name=mySuggester,lookupImpl=FuzzyLookupFactory,dictionaryImpl=DocumentDictionaryFactory,field=cat,weightField=price,suggestAnalyzerFieldType=string}
+INFO  - 2019-05-16 04:17:50.786; [   ] org.apache.solr.core.QuerySenderListener; QuerySenderListener sending requests to Searcher@4727aa39[LiveSearchRecruiter] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_r8(5.1.0):C32)))}
+INFO  - 2019-05-16 04:17:50.790; [   ] org.apache.solr.core.CoreContainer; registering core: LiveSearchRecruiter
+INFO  - 2019-05-16 04:17:50.790; [   ] org.apache.solr.spelling.suggest.SolrSuggester; Dictionary loaded with params: {name=mySuggester,lookupImpl=FuzzyLookupFactory,dictionaryImpl=DocumentDictionaryFactory,field=cat,weightField=price,suggestAnalyzerFieldType=string}
+INFO  - 2019-05-16 04:17:50.794; [   ] org.apache.solr.core.SolrResourceLoader; new SolrResourceLoader for directory: 'E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\SearchJobs\'
+INFO  - 2019-05-16 04:17:50.794; [   ] org.apache.solr.handler.component.SuggestComponent; Registering searcher listener for suggester: mySuggester - SuggesterListener [core=org.apache.solr.core.SolrCore@6a9a8641, suggester=SolrSuggester [ name=mySuggester, sourceLocation=null, storeDir=, lookupImpl=FuzzyLookupFactory, dictionaryImpl=DocumentDictionaryFactory, sizeInBytes=0 ], buildOnCommit=false, buildOnOptimize=false, buildOnStartup=true, isCoreReload=false]
+INFO  - 2019-05-16 04:17:50.846; [   ] org.apache.solr.handler.ReplicationHandler; Commits will be reserved for  10000
+WARN  - 2019-05-16 04:17:50.874; [   ] org.apache.solr.handler.admin.AdminHandlers; <requestHandler name="/admin/" 
+ class="solr.admin.AdminHandlers" /> is deprecated . It is not required anymore
+INFO  - 2019-05-16 04:17:50.882; [   ] org.apache.solr.core.QuerySenderListener; QuerySenderListener sending requests to Searcher@7ed4457a[LiveSearchJobseeker] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_je(5.1.0):C101/5:delGen=1)))}
+INFO  - 2019-05-16 04:17:50.886; [   ] org.apache.solr.core.CoreContainer; registering core: LiveSearchJobseeker
+INFO  - 2019-05-16 04:17:50.918; [   ] org.apache.solr.core.SolrResourceLoader; new SolrResourceLoader for directory: 'E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\SearchJobseeker\'
+INFO  - 2019-05-16 04:17:50.970; [   ] org.apache.solr.handler.component.QueryElevationComponent; Loading QueryElevation from: E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\LiveSearchJobs\conf\elevate.xml
+INFO  - 2019-05-16 04:17:51.222; [   ] org.apache.solr.handler.ReplicationHandler; Commits will be reserved for  10000
+WARN  - 2019-05-16 04:17:51.234; [   ] org.apache.solr.handler.admin.AdminHandlers; <requestHandler name="/admin/" 
+ class="solr.admin.AdminHandlers" /> is deprecated . It is not required anymore
+INFO  - 2019-05-16 04:17:51.238; [   ] org.apache.solr.core.QuerySenderListener; QuerySenderListener sending requests to Searcher@3598922e[LiveSearchJobs] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_e1(5.1.0):C75)))}
+INFO  - 2019-05-16 04:17:51.238; [   ] org.apache.solr.core.CoreContainer; registering core: LiveSearchJobs
+INFO  - 2019-05-16 04:17:51.238; [   ] org.apache.solr.core.SolrResourceLoader; new SolrResourceLoader for directory: 'E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\SearchRecruiter\'
+INFO  - 2019-05-16 04:17:51.514; [   ] org.apache.solr.core.SolrConfig; current version of requestparams : -1
+INFO  - 2019-05-16 04:17:51.526; [   ] org.apache.solr.core.SolrConfig; current version of requestparams : -1
+INFO  - 2019-05-16 04:17:51.518; [   ] org.apache.solr.core.SolrConfig; current version of requestparams : -1
+INFO  - 2019-05-16 04:17:51.542; [   ] org.apache.solr.core.SolrConfig; Adding specified lib dirs to ClassLoader
+INFO  - 2019-05-16 04:17:51.538; [   ] org.apache.solr.core.SolrConfig; Adding specified lib dirs to ClassLoader
+INFO  - 2019-05-16 04:17:51.542; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/dist/solr-dataimporthandler-5.1.0.jar' to classloader
+INFO  - 2019-05-16 04:17:51.542; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/dist/solr-dataimporthandler-extras-5.1.0.jar' to classloader
+INFO  - 2019-05-16 04:17:51.538; [   ] org.apache.solr.core.SolrConfig; Adding specified lib dirs to ClassLoader
+INFO  - 2019-05-16 04:17:51.546; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/dist/solr-dataimporthandler-5.1.0.jar' to classloader
+INFO  - 2019-05-16 04:17:51.546; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/dist/solr-dataimporthandler-5.1.0.jar' to classloader
+INFO  - 2019-05-16 04:17:51.546; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/dist/sqljdbc4.jar' to classloader
+INFO  - 2019-05-16 04:17:51.598; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/dist/solr-dataimporthandler-extras-5.1.0.jar' to classloader
+INFO  - 2019-05-16 04:17:51.594; [   ] org.apache.solr.core.SolrCore; [LiveSearchJobs] webapp=null path=null params={q=static+firstSearcher+warming+in+solrconfig.xml&distrib=false&event=firstSearcher} hits=19 status=0 QTime=356 
+INFO  - 2019-05-16 04:17:51.594; [   ] org.apache.solr.core.SolrCore; [LiveSearchJobseeker] webapp=null path=null params={q=static+firstSearcher+warming+in+solrconfig.xml&distrib=false&event=firstSearcher} hits=14 status=0 QTime=676 
+INFO  - 2019-05-16 04:17:51.562; [   ] org.apache.solr.core.SolrCore; [LiveSearchRecruiter] webapp=null path=null params={q=static+firstSearcher+warming+in+solrconfig.xml&distrib=false&event=firstSearcher} hits=3 status=0 QTime=764 
+INFO  - 2019-05-16 04:17:51.546; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/dist/solr-dataimporthandler-extras-5.1.0.jar' to classloader
+INFO  - 2019-05-16 04:17:51.602; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/dist/sqljdbc4.jar' to classloader
+INFO  - 2019-05-16 04:17:51.602; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/apache-mime4j-core-0.7.2.jar' to classloader
+INFO  - 2019-05-16 04:17:51.618; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/apache-mime4j-core-0.7.2.jar' to classloader
+INFO  - 2019-05-16 04:17:51.618; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/dist/sqljdbc4.jar' to classloader
+INFO  - 2019-05-16 04:17:51.650; [   ] org.apache.solr.core.QuerySenderListener; QuerySenderListener done.
+INFO  - 2019-05-16 04:17:51.686; [   ] org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener; Loading spell index for spellchecker: default
+INFO  - 2019-05-16 04:17:51.686; [   ] org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener; Loading spell index for spellchecker: wordbreak
+INFO  - 2019-05-16 04:17:51.634; [   ] org.apache.solr.core.QuerySenderListener; QuerySenderListener done.
+INFO  - 2019-05-16 04:17:51.694; [   ] org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener; Loading spell index for spellchecker: default
+INFO  - 2019-05-16 04:17:51.694; [   ] org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener; Loading spell index for spellchecker: wordbreak
+INFO  - 2019-05-16 04:17:51.694; [   ] org.apache.solr.handler.component.SuggestComponent$SuggesterListener; buildOnStartup: mySuggester
+INFO  - 2019-05-16 04:17:51.626; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/apache-mime4j-dom-0.7.2.jar' to classloader
+INFO  - 2019-05-16 04:17:51.618; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/apache-mime4j-dom-0.7.2.jar' to classloader
+INFO  - 2019-05-16 04:17:51.694; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/aspectjrt-1.8.0.jar' to classloader
+INFO  - 2019-05-16 04:17:51.698; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/bcmail-jdk15-1.45.jar' to classloader
+INFO  - 2019-05-16 04:17:51.694; [   ] org.apache.solr.spelling.suggest.SolrSuggester; SolrSuggester.build(mySuggester)
+INFO  - 2019-05-16 04:17:51.690; [   ] org.apache.solr.handler.component.SuggestComponent$SuggesterListener; buildOnStartup: mySuggester
+INFO  - 2019-05-16 04:17:51.702; [   ] org.apache.solr.spelling.suggest.SolrSuggester; SolrSuggester.build(mySuggester)
+INFO  - 2019-05-16 04:17:51.686; [   ] org.apache.solr.core.QuerySenderListener; QuerySenderListener done.
+INFO  - 2019-05-16 04:17:51.706; [   ] org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener; Loading spell index for spellchecker: default
+INFO  - 2019-05-16 04:17:51.706; [   ] org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener; Loading spell index for spellchecker: wordbreak
+INFO  - 2019-05-16 04:17:51.686; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/apache-mime4j-core-0.7.2.jar' to classloader
+INFO  - 2019-05-16 04:17:51.718; [   ] org.apache.solr.handler.component.SuggestComponent$SuggesterListener; buildOnStartup: mySuggester
+INFO  - 2019-05-16 04:17:51.718; [   ] org.apache.solr.spelling.suggest.SolrSuggester; SolrSuggester.build(mySuggester)
+INFO  - 2019-05-16 04:17:51.702; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/bcprov-jdk15-1.45.jar' to classloader
+INFO  - 2019-05-16 04:17:51.698; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/aspectjrt-1.8.0.jar' to classloader
+INFO  - 2019-05-16 04:17:51.718; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/boilerpipe-1.1.0.jar' to classloader
+INFO  - 2019-05-16 04:17:51.718; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/apache-mime4j-dom-0.7.2.jar' to classloader
+INFO  - 2019-05-16 04:17:51.718; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/commons-compress-1.8.1.jar' to classloader
+INFO  - 2019-05-16 04:17:51.718; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/bcmail-jdk15-1.45.jar' to classloader
+INFO  - 2019-05-16 04:17:51.722; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/fontbox-1.8.8.jar' to classloader
+INFO  - 2019-05-16 04:17:51.718; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/aspectjrt-1.8.0.jar' to classloader
+INFO  - 2019-05-16 04:17:51.722; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/icu4j-54.1.jar' to classloader
+INFO  - 2019-05-16 04:17:51.722; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/bcprov-jdk15-1.45.jar' to classloader
+INFO  - 2019-05-16 04:17:51.722; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/boilerpipe-1.1.0.jar' to classloader
+INFO  - 2019-05-16 04:17:51.722; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/commons-compress-1.8.1.jar' to classloader
+INFO  - 2019-05-16 04:17:51.722; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/fontbox-1.8.8.jar' to classloader
+INFO  - 2019-05-16 04:17:51.726; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/icu4j-54.1.jar' to classloader
+INFO  - 2019-05-16 04:17:51.726; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/isoparser-1.0.2.jar' to classloader
+INFO  - 2019-05-16 04:17:51.726; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/java-libpst-0.8.1.jar' to classloader
+INFO  - 2019-05-16 04:17:51.726; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/jdom-1.0.jar' to classloader
+INFO  - 2019-05-16 04:17:51.726; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/jempbox-1.8.8.jar' to classloader
+INFO  - 2019-05-16 04:17:51.726; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/jmatio-1.0.jar' to classloader
+INFO  - 2019-05-16 04:17:51.730; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/juniversalchardet-1.0.3.jar' to classloader
+INFO  - 2019-05-16 04:17:51.730; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/metadata-extractor-2.6.2.jar' to classloader
+INFO  - 2019-05-16 04:17:51.722; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/isoparser-1.0.2.jar' to classloader
+INFO  - 2019-05-16 04:17:51.722; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/bcmail-jdk15-1.45.jar' to classloader
+INFO  - 2019-05-16 04:17:51.730; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/java-libpst-0.8.1.jar' to classloader
+INFO  - 2019-05-16 04:17:51.730; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/pdfbox-1.8.8.jar' to classloader
+INFO  - 2019-05-16 04:17:51.734; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/jdom-1.0.jar' to classloader
+INFO  - 2019-05-16 04:17:51.730; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/bcprov-jdk15-1.45.jar' to classloader
+INFO  - 2019-05-16 04:17:51.734; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/jempbox-1.8.8.jar' to classloader
+INFO  - 2019-05-16 04:17:51.734; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/poi-3.11.jar' to classloader
+INFO  - 2019-05-16 04:17:51.734; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/jmatio-1.0.jar' to classloader
+INFO  - 2019-05-16 04:17:51.734; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/boilerpipe-1.1.0.jar' to classloader
+INFO  - 2019-05-16 04:17:51.734; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/juniversalchardet-1.0.3.jar' to classloader
+INFO  - 2019-05-16 04:17:51.734; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/poi-ooxml-3.11.jar' to classloader
+INFO  - 2019-05-16 04:17:51.734; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/metadata-extractor-2.6.2.jar' to classloader
+INFO  - 2019-05-16 04:17:51.734; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/commons-compress-1.8.1.jar' to classloader
+INFO  - 2019-05-16 04:17:51.738; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/pdfbox-1.8.8.jar' to classloader
+INFO  - 2019-05-16 04:17:51.738; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/poi-ooxml-schemas-3.11.jar' to classloader
+INFO  - 2019-05-16 04:17:51.738; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/poi-3.11.jar' to classloader
+INFO  - 2019-05-16 04:17:51.738; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/fontbox-1.8.8.jar' to classloader
+INFO  - 2019-05-16 04:17:51.738; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/poi-ooxml-3.11.jar' to classloader
+INFO  - 2019-05-16 04:17:51.738; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/poi-scratchpad-3.11.jar' to classloader
+INFO  - 2019-05-16 04:17:51.738; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/poi-ooxml-schemas-3.11.jar' to classloader
+INFO  - 2019-05-16 04:17:51.738; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/icu4j-54.1.jar' to classloader
+INFO  - 2019-05-16 04:17:51.742; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/isoparser-1.0.2.jar' to classloader
+INFO  - 2019-05-16 04:17:51.738; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/poi-scratchpad-3.11.jar' to classloader
+INFO  - 2019-05-16 04:17:51.742; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/rome-1.0.jar' to classloader
+INFO  - 2019-05-16 04:17:51.738; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/rome-1.0.jar' to classloader
+INFO  - 2019-05-16 04:17:51.742; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/tagsoup-1.2.1.jar' to classloader
+INFO  - 2019-05-16 04:17:51.742; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/java-libpst-0.8.1.jar' to classloader
+INFO  - 2019-05-16 04:17:51.746; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/tika-core-1.7.jar' to classloader
+INFO  - 2019-05-16 04:17:51.742; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/tagsoup-1.2.1.jar' to classloader
+INFO  - 2019-05-16 04:17:51.746; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/tika-java7-1.7.jar' to classloader
+INFO  - 2019-05-16 04:17:51.746; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/jdom-1.0.jar' to classloader
+INFO  - 2019-05-16 04:17:51.746; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/tika-parsers-1.7.jar' to classloader
+INFO  - 2019-05-16 04:17:51.746; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/tika-core-1.7.jar' to classloader
+INFO  - 2019-05-16 04:17:51.746; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/tika-xmp-1.7.jar' to classloader
+INFO  - 2019-05-16 04:17:51.746; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/jempbox-1.8.8.jar' to classloader
+INFO  - 2019-05-16 04:17:51.750; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/vorbis-java-core-0.6.jar' to classloader
+INFO  - 2019-05-16 04:17:51.746; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/tika-java7-1.7.jar' to classloader
+INFO  - 2019-05-16 04:17:51.750; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/vorbis-java-tika-0.6.jar' to classloader
+INFO  - 2019-05-16 04:17:51.750; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/jmatio-1.0.jar' to classloader
+INFO  - 2019-05-16 04:17:51.750; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/xercesImpl-2.9.1.jar' to classloader
+INFO  - 2019-05-16 04:17:51.750; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/tika-parsers-1.7.jar' to classloader
+INFO  - 2019-05-16 04:17:51.750; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/xmlbeans-2.6.0.jar' to classloader
+INFO  - 2019-05-16 04:17:51.750; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/juniversalchardet-1.0.3.jar' to classloader
+INFO  - 2019-05-16 04:17:51.750; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/xmpcore-5.1.2.jar' to classloader
+INFO  - 2019-05-16 04:17:51.750; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/tika-xmp-1.7.jar' to classloader
+INFO  - 2019-05-16 04:17:51.754; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/xz-1.5.jar' to classloader
+INFO  - 2019-05-16 04:17:51.750; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/metadata-extractor-2.6.2.jar' to classloader
+INFO  - 2019-05-16 04:17:51.754; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/pdfbox-1.8.8.jar' to classloader
+INFO  - 2019-05-16 04:17:51.754; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/vorbis-java-core-0.6.jar' to classloader
+INFO  - 2019-05-16 04:17:51.754; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/poi-3.11.jar' to classloader
+INFO  - 2019-05-16 04:17:51.754; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/dist/solr-cell-5.1.0.jar' to classloader
+INFO  - 2019-05-16 04:17:51.754; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/poi-ooxml-3.11.jar' to classloader
+INFO  - 2019-05-16 04:17:51.754; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/poi-ooxml-schemas-3.11.jar' to classloader
+INFO  - 2019-05-16 04:17:51.758; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/poi-scratchpad-3.11.jar' to classloader
+INFO  - 2019-05-16 04:17:51.754; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/vorbis-java-tika-0.6.jar' to classloader
+INFO  - 2019-05-16 04:17:51.758; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/rome-1.0.jar' to classloader
+INFO  - 2019-05-16 04:17:51.758; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/clustering/lib/attributes-binder-1.2.1.jar' to classloader
+INFO  - 2019-05-16 04:17:51.758; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/tagsoup-1.2.1.jar' to classloader
+INFO  - 2019-05-16 04:17:51.758; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/xercesImpl-2.9.1.jar' to classloader
+INFO  - 2019-05-16 04:17:51.766; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/xmlbeans-2.6.0.jar' to classloader
+INFO  - 2019-05-16 04:17:51.766; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/xmpcore-5.1.2.jar' to classloader
+INFO  - 2019-05-16 04:17:51.758; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/tika-core-1.7.jar' to classloader
+INFO  - 2019-05-16 04:17:51.758; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/clustering/lib/carrot2-mini-3.9.0.jar' to classloader
+INFO  - 2019-05-16 04:17:51.770; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/clustering/lib/hppc-0.5.2.jar' to classloader
+INFO  - 2019-05-16 04:17:51.770; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/clustering/lib/jackson-core-asl-1.9.13.jar' to classloader
+INFO  - 2019-05-16 04:17:51.770; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/clustering/lib/jackson-mapper-asl-1.9.13.jar' to classloader
+INFO  - 2019-05-16 04:17:51.774; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/clustering/lib/mahout-collections-1.0.jar' to classloader
+INFO  - 2019-05-16 04:17:51.774; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/clustering/lib/mahout-math-0.6.jar' to classloader
+INFO  - 2019-05-16 04:17:51.774; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/clustering/lib/simple-xml-2.7.jar' to classloader
+INFO  - 2019-05-16 04:17:51.774; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/dist/solr-clustering-5.1.0.jar' to classloader
+INFO  - 2019-05-16 04:17:51.782; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/langid/lib/jsonic-1.2.7.jar' to classloader
+INFO  - 2019-05-16 04:17:51.782; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/langid/lib/langdetect-1.1-20120112.jar' to classloader
+INFO  - 2019-05-16 04:17:51.786; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/dist/solr-langid-5.1.0.jar' to classloader
+INFO  - 2019-05-16 04:17:51.786; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/velocity/lib/commons-beanutils-1.8.3.jar' to classloader
+INFO  - 2019-05-16 04:17:51.786; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/velocity/lib/commons-collections-3.2.1.jar' to classloader
+INFO  - 2019-05-16 04:17:51.786; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/velocity/lib/velocity-1.7.jar' to classloader
+INFO  - 2019-05-16 04:17:51.790; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/velocity/lib/velocity-tools-2.0.jar' to classloader
+INFO  - 2019-05-16 04:17:51.794; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/dist/solr-velocity-5.1.0.jar' to classloader
+INFO  - 2019-05-16 04:17:51.770; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/tika-java7-1.7.jar' to classloader
+INFO  - 2019-05-16 04:17:51.770; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/xz-1.5.jar' to classloader
+INFO  - 2019-05-16 04:17:51.798; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/tika-parsers-1.7.jar' to classloader
+INFO  - 2019-05-16 04:17:51.806; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/dist/solr-cell-5.1.0.jar' to classloader
+INFO  - 2019-05-16 04:17:51.818; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/tika-xmp-1.7.jar' to classloader
+INFO  - 2019-05-16 04:17:51.826; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/vorbis-java-core-0.6.jar' to classloader
+INFO  - 2019-05-16 04:17:51.830; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/clustering/lib/attributes-binder-1.2.1.jar' to classloader
+INFO  - 2019-05-16 04:17:51.854; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/clustering/lib/carrot2-mini-3.9.0.jar' to classloader
+INFO  - 2019-05-16 04:17:51.846; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/vorbis-java-tika-0.6.jar' to classloader
+INFO  - 2019-05-16 04:17:51.854; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/clustering/lib/hppc-0.5.2.jar' to classloader
+INFO  - 2019-05-16 04:17:51.854; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/xercesImpl-2.9.1.jar' to classloader
+INFO  - 2019-05-16 04:17:51.858; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/xmlbeans-2.6.0.jar' to classloader
+INFO  - 2019-05-16 04:17:51.858; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/clustering/lib/jackson-core-asl-1.9.13.jar' to classloader
+INFO  - 2019-05-16 04:17:52.006; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/xmpcore-5.1.2.jar' to classloader
+INFO  - 2019-05-16 04:17:51.946; [   ] org.apache.solr.update.SolrIndexConfig; IndexWriter infoStream solr logging is enabled
+INFO  - 2019-05-16 04:17:52.258; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/extraction/lib/xz-1.5.jar' to classloader
+INFO  - 2019-05-16 04:17:52.074; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/clustering/lib/jackson-mapper-asl-1.9.13.jar' to classloader
+INFO  - 2019-05-16 04:17:52.446; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/dist/solr-cell-5.1.0.jar' to classloader
+INFO  - 2019-05-16 04:17:52.366; [   ] org.apache.solr.core.SolrConfig; Using Lucene MatchVersion: 5.1.0
+INFO  - 2019-05-16 04:17:52.466; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/clustering/lib/attributes-binder-1.2.1.jar' to classloader
+INFO  - 2019-05-16 04:17:52.470; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/clustering/lib/carrot2-mini-3.9.0.jar' to classloader
+INFO  - 2019-05-16 04:17:52.458; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/clustering/lib/mahout-collections-1.0.jar' to classloader
+INFO  - 2019-05-16 04:17:52.470; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/clustering/lib/hppc-0.5.2.jar' to classloader
+INFO  - 2019-05-16 04:17:52.534; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/clustering/lib/mahout-math-0.6.jar' to classloader
+INFO  - 2019-05-16 04:17:52.558; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/clustering/lib/jackson-core-asl-1.9.13.jar' to classloader
+INFO  - 2019-05-16 04:17:52.558; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/clustering/lib/simple-xml-2.7.jar' to classloader
+INFO  - 2019-05-16 04:17:52.574; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/clustering/lib/jackson-mapper-asl-1.9.13.jar' to classloader
+INFO  - 2019-05-16 04:17:52.582; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/dist/solr-clustering-5.1.0.jar' to classloader
+INFO  - 2019-05-16 04:17:52.586; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/clustering/lib/mahout-collections-1.0.jar' to classloader
+INFO  - 2019-05-16 04:17:52.586; [   ] org.apache.solr.core.SolrConfig; Loaded SolrConfig: solrconfig.xml
+INFO  - 2019-05-16 04:17:52.590; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/langid/lib/jsonic-1.2.7.jar' to classloader
+INFO  - 2019-05-16 04:17:52.590; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/langid/lib/langdetect-1.1-20120112.jar' to classloader
+INFO  - 2019-05-16 04:17:52.590; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/clustering/lib/mahout-math-0.6.jar' to classloader
+INFO  - 2019-05-16 04:17:52.602; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/dist/solr-langid-5.1.0.jar' to classloader
+INFO  - 2019-05-16 04:17:52.602; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/clustering/lib/simple-xml-2.7.jar' to classloader
+INFO  - 2019-05-16 04:17:52.602; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/velocity/lib/commons-beanutils-1.8.3.jar' to classloader
+INFO  - 2019-05-16 04:17:52.602; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/dist/solr-clustering-5.1.0.jar' to classloader
+INFO  - 2019-05-16 04:17:52.606; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/velocity/lib/commons-collections-3.2.1.jar' to classloader
+INFO  - 2019-05-16 04:17:52.606; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/langid/lib/jsonic-1.2.7.jar' to classloader
+INFO  - 2019-05-16 04:17:52.610; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/velocity/lib/velocity-1.7.jar' to classloader
+INFO  - 2019-05-16 04:17:52.614; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/langid/lib/langdetect-1.1-20120112.jar' to classloader
+INFO  - 2019-05-16 04:17:52.618; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/velocity/lib/velocity-tools-2.0.jar' to classloader
+INFO  - 2019-05-16 04:17:52.622; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/dist/solr-langid-5.1.0.jar' to classloader
+INFO  - 2019-05-16 04:17:52.622; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/dist/solr-velocity-5.1.0.jar' to classloader
+INFO  - 2019-05-16 04:17:52.622; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/velocity/lib/commons-beanutils-1.8.3.jar' to classloader
+INFO  - 2019-05-16 04:17:52.622; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/velocity/lib/commons-collections-3.2.1.jar' to classloader
+INFO  - 2019-05-16 04:17:52.626; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/velocity/lib/velocity-1.7.jar' to classloader
+INFO  - 2019-05-16 04:17:52.626; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/contrib/velocity/lib/velocity-tools-2.0.jar' to classloader
+INFO  - 2019-05-16 04:17:52.626; [   ] org.apache.solr.core.SolrResourceLoader; Adding 'file:/E:/Solr%20Nandha/LeapEdge.SolrInstance/solr/dist/solr-velocity-5.1.0.jar' to classloader
+INFO  - 2019-05-16 04:17:52.690; [   ] org.apache.solr.update.SolrIndexConfig; IndexWriter infoStream solr logging is enabled
+INFO  - 2019-05-16 04:17:52.698; [   ] org.apache.solr.core.SolrConfig; Using Lucene MatchVersion: 5.1.0
+INFO  - 2019-05-16 04:17:52.734; [   ] org.apache.solr.update.SolrIndexConfig; IndexWriter infoStream solr logging is enabled
+INFO  - 2019-05-16 04:17:52.766; [   ] org.apache.solr.core.SolrConfig; Using Lucene MatchVersion: 5.1.0
+INFO  - 2019-05-16 04:17:52.830; [   ] org.apache.solr.core.SolrConfig; Loaded SolrConfig: solrconfig.xml
+INFO  - 2019-05-16 04:17:52.934; [   ] org.apache.solr.core.SolrConfig; Loaded SolrConfig: solrconfig.xml
+INFO  - 2019-05-16 04:17:53.158; [   ] org.apache.solr.schema.IndexSchema; Reading Solr Schema from E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\SearchJobs\conf\schema.xml
+INFO  - 2019-05-16 04:17:53.202; [   ] org.apache.solr.core.SolrCore; [LiveSearchJobseeker] Registered new searcher Searcher@7ed4457a[LiveSearchJobseeker] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_je(5.1.0):C101/5:delGen=1)))}
+INFO  - 2019-05-16 04:17:53.222; [   ] org.apache.solr.schema.IndexSchema; [SearchJobs] Schema name=example-DIH-solr
+INFO  - 2019-05-16 04:17:53.218; [   ] org.apache.solr.core.SolrCore; [LiveSearchJobs] Registered new searcher Searcher@3598922e[LiveSearchJobs] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_e1(5.1.0):C75)))}
+INFO  - 2019-05-16 04:17:53.202; [   ] org.apache.solr.core.SolrCore; [LiveSearchRecruiter] Registered new searcher Searcher@4727aa39[LiveSearchRecruiter] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_r8(5.1.0):C32)))}
+INFO  - 2019-05-16 04:17:53.664; [   ] org.apache.solr.schema.IndexSchema; Reading Solr Schema from E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\SearchRecruiter\conf\schema.xml
+INFO  - 2019-05-16 04:17:53.752; [   ] org.apache.solr.schema.IndexSchema; [SearchRecruiter] Schema name=example-DIH-solr
+INFO  - 2019-05-16 04:17:53.872; [   ] org.apache.solr.schema.IndexSchema; unique key field: id
+INFO  - 2019-05-16 04:17:54.296; [   ] org.apache.solr.schema.IndexSchema; Reading Solr Schema from E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\SearchJobseeker\conf\schema.xml
+INFO  - 2019-05-16 04:17:54.364; [   ] org.apache.solr.schema.IndexSchema; [SearchJobseeker] Schema name=example-DIH-solr
+INFO  - 2019-05-16 04:17:54.428; [   ] org.apache.solr.schema.IndexSchema; unique key field: id
+INFO  - 2019-05-16 04:17:55.104; [   ] org.apache.solr.schema.IndexSchema; unique key field: id
+INFO  - 2019-05-16 04:17:56.259; [   ] org.apache.solr.schema.FileExchangeRateProvider; Reloading exchange rates from file currency.xml
+INFO  - 2019-05-16 04:17:56.475; [   ] org.apache.solr.schema.FileExchangeRateProvider; Reloading exchange rates from file currency.xml
+INFO  - 2019-05-16 04:17:56.483; [   ] org.apache.solr.schema.FileExchangeRateProvider; Reloading exchange rates from file currency.xml
+INFO  - 2019-05-16 04:17:57.099; [   ] org.apache.solr.schema.FileExchangeRateProvider; Reloading exchange rates from file currency.xml
+INFO  - 2019-05-16 04:17:57.315; [   ] org.apache.solr.schema.FileExchangeRateProvider; Reloading exchange rates from file currency.xml
+INFO  - 2019-05-16 04:17:57.323; [   ] org.apache.solr.schema.FileExchangeRateProvider; Reloading exchange rates from file currency.xml
+INFO  - 2019-05-16 04:18:06.494; [   ] org.apache.solr.core.CoreContainer; Creating SolrCore 'SearchJobs' using configuration from instancedir E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\SearchJobs\
+INFO  - 2019-05-16 04:18:06.494; [   ] org.apache.solr.core.CoreContainer; Creating SolrCore 'SearchRecruiter' using configuration from instancedir E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\SearchRecruiter\
+INFO  - 2019-05-16 04:18:06.498; [   ] org.apache.solr.core.SolrCore; solr.NRTCachingDirectoryFactory
+INFO  - 2019-05-16 04:18:06.494; [   ] org.apache.solr.core.SolrCore; solr.NRTCachingDirectoryFactory
+INFO  - 2019-05-16 04:18:06.934; [   ] org.apache.solr.core.SolrCore; [SearchJobs] Opening new SolrCore at E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\SearchJobs\, dataDir=E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\SearchJobs\data\
+INFO  - 2019-05-16 04:18:06.934; [   ] org.apache.solr.core.JmxMonitoredMap; No JMX servers found, not exposing Solr information with JMX.
+INFO  - 2019-05-16 04:18:06.934; [   ] org.apache.solr.core.SolrCore; [SearchJobs] Added SolrEventListener for newSearcher: org.apache.solr.core.QuerySenderListener{queries=[]}
+INFO  - 2019-05-16 04:18:06.934; [   ] org.apache.solr.core.SolrCore; [SearchJobs] Added SolrEventListener for firstSearcher: org.apache.solr.core.QuerySenderListener{queries=[{q=static firstSearcher warming in solrconfig.xml}]}
+INFO  - 2019-05-16 04:18:06.938; [   ] org.apache.solr.core.CachingDirectoryFactory; return new directory for E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\SearchJobs\data
+INFO  - 2019-05-16 04:18:06.938; [   ] org.apache.solr.core.SolrCore; New index directory detected: old=null new=E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\SearchJobs\data\index/
+INFO  - 2019-05-16 04:18:06.954; [   ] org.apache.solr.core.CoreContainer; Creating SolrCore 'SearchJobseeker' using configuration from instancedir E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\SearchJobseeker\
+INFO  - 2019-05-16 04:18:06.958; [   ] org.apache.solr.core.SolrCore; [SearchRecruiter] Opening new SolrCore at E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\SearchRecruiter\, dataDir=E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\SearchRecruiter\data\
+INFO  - 2019-05-16 04:18:06.962; [   ] org.apache.solr.core.SolrCore; solr.NRTCachingDirectoryFactory
+INFO  - 2019-05-16 04:18:06.962; [   ] org.apache.solr.core.JmxMonitoredMap; No JMX servers found, not exposing Solr information with JMX.
+INFO  - 2019-05-16 04:18:06.977; [   ] org.apache.solr.core.SolrCore; [SearchRecruiter] Added SolrEventListener for newSearcher: org.apache.solr.core.QuerySenderListener{queries=[]}
+INFO  - 2019-05-16 04:18:06.986; [   ] org.apache.solr.core.SolrCore; [SearchRecruiter] Added SolrEventListener for firstSearcher: org.apache.solr.core.QuerySenderListener{queries=[{q=static firstSearcher warming in solrconfig.xml}]}
+INFO  - 2019-05-16 04:18:06.990; [   ] org.apache.solr.core.CachingDirectoryFactory; return new directory for E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\SearchRecruiter\data
+INFO  - 2019-05-16 04:18:06.998; [   ] org.apache.solr.core.SolrCore; New index directory detected: old=null new=E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\SearchRecruiter\data\index/
+INFO  - 2019-05-16 04:18:07.450; [   ] org.apache.solr.core.SolrCore; [SearchJobseeker] Opening new SolrCore at E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\SearchJobseeker\, dataDir=E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\SearchJobseeker\data\
+INFO  - 2019-05-16 04:18:07.450; [   ] org.apache.solr.core.JmxMonitoredMap; No JMX servers found, not exposing Solr information with JMX.
+INFO  - 2019-05-16 04:18:07.450; [   ] org.apache.solr.core.SolrCore; [SearchJobseeker] Added SolrEventListener for newSearcher: org.apache.solr.core.QuerySenderListener{queries=[]}
+INFO  - 2019-05-16 04:18:07.450; [   ] org.apache.solr.core.SolrCore; [SearchJobseeker] Added SolrEventListener for firstSearcher: org.apache.solr.core.QuerySenderListener{queries=[{q=static firstSearcher warming in solrconfig.xml}]}
+INFO  - 2019-05-16 04:18:07.454; [   ] org.apache.solr.core.CachingDirectoryFactory; return new directory for E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\SearchJobseeker\data
+INFO  - 2019-05-16 04:18:07.454; [   ] org.apache.solr.core.SolrCore; New index directory detected: old=null new=E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\SearchJobseeker\data\index/
+INFO  - 2019-05-16 04:18:07.618; [   ] org.apache.solr.core.CachingDirectoryFactory; return new directory for E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\SearchJobseeker\data\index
+INFO  - 2019-05-16 04:18:07.618; [   ] org.apache.solr.core.CachingDirectoryFactory; return new directory for E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\SearchRecruiter\data\index
+INFO  - 2019-05-16 04:18:07.622; [   ] org.apache.solr.core.CachingDirectoryFactory; return new directory for E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\SearchJobs\data\index
+INFO  - 2019-05-16 04:18:07.857; [   ] org.apache.solr.core.PluginBag; queryResponseWriter : 'velocity' created with startup=lazy 
+INFO  - 2019-05-16 04:18:07.857; [   ] org.apache.solr.core.PluginBag; queryResponseWriter : 'velocity' created with startup=lazy 
+INFO  - 2019-05-16 04:18:07.869; [   ] org.apache.solr.response.XSLTResponseWriter; xsltCacheLifetimeSeconds=5
+INFO  - 2019-05-16 04:18:07.869; [   ] org.apache.solr.response.XSLTResponseWriter; xsltCacheLifetimeSeconds=5
+INFO  - 2019-05-16 04:18:07.897; [   ] org.apache.solr.core.SolrCore; no updateRequestProcessorChain defined as default, creating implicit default
+INFO  - 2019-05-16 04:18:07.897; [   ] org.apache.solr.core.SolrCore; no updateRequestProcessorChain defined as default, creating implicit default
+INFO  - 2019-05-16 04:18:07.901; [   ] org.apache.solr.handler.loader.XMLLoader; xsltCacheLifetimeSeconds=60
+INFO  - 2019-05-16 04:18:07.901; [   ] org.apache.solr.handler.loader.XMLLoader; xsltCacheLifetimeSeconds=60
+INFO  - 2019-05-16 04:18:07.901; [   ] org.apache.solr.handler.loader.XMLLoader; xsltCacheLifetimeSeconds=60
+INFO  - 2019-05-16 04:18:07.901; [   ] org.apache.solr.handler.loader.XMLLoader; xsltCacheLifetimeSeconds=60
+INFO  - 2019-05-16 04:18:07.935; [   ] org.apache.solr.handler.loader.XMLLoader; xsltCacheLifetimeSeconds=60
+INFO  - 2019-05-16 04:18:07.981; [   ] org.apache.solr.core.PluginBag; queryResponseWriter : 'velocity' created with startup=lazy 
+INFO  - 2019-05-16 04:18:07.969; [   ] org.apache.solr.handler.loader.XMLLoader; xsltCacheLifetimeSeconds=60
+INFO  - 2019-05-16 04:18:07.985; [   ] org.apache.solr.response.XSLTResponseWriter; xsltCacheLifetimeSeconds=5
+INFO  - 2019-05-16 04:18:07.985; [   ] org.apache.solr.handler.loader.XMLLoader; xsltCacheLifetimeSeconds=60
+INFO  - 2019-05-16 04:18:08.001; [   ] org.apache.solr.core.SolrCore; no updateRequestProcessorChain defined as default, creating implicit default
+INFO  - 2019-05-16 04:18:07.993; [   ] org.apache.solr.handler.loader.XMLLoader; xsltCacheLifetimeSeconds=60
+INFO  - 2019-05-16 04:18:08.005; [   ] org.apache.solr.handler.loader.XMLLoader; xsltCacheLifetimeSeconds=60
+INFO  - 2019-05-16 04:18:08.009; [   ] org.apache.solr.handler.loader.XMLLoader; xsltCacheLifetimeSeconds=60
+INFO  - 2019-05-16 04:18:08.021; [   ] org.apache.solr.handler.loader.XMLLoader; xsltCacheLifetimeSeconds=60
+INFO  - 2019-05-16 04:18:08.057; [   ] org.apache.solr.core.PluginBag; requestHandler : '/update/extract' created with startup=lazy 
+INFO  - 2019-05-16 04:18:08.077; [   ] org.apache.solr.core.PluginBag; requestHandler : '/analysis/field' created with startup=lazy 
+INFO  - 2019-05-16 04:18:08.081; [   ] org.apache.solr.core.PluginBag; requestHandler : '/analysis/document' created with startup=lazy 
+INFO  - 2019-05-16 04:18:08.061; [   ] org.apache.solr.handler.loader.XMLLoader; xsltCacheLifetimeSeconds=60
+INFO  - 2019-05-16 04:18:08.061; [   ] org.apache.solr.core.PluginBag; requestHandler : '/update/extract' created with startup=lazy 
+INFO  - 2019-05-16 04:18:08.117; [   ] org.apache.solr.core.PluginBag; requestHandler : '/update/extract' created with startup=lazy 
+INFO  - 2019-05-16 04:18:08.089; [   ] org.apache.solr.core.PluginBag; requestHandler : '/spell' created with startup=lazy 
+INFO  - 2019-05-16 04:18:08.117; [   ] org.apache.solr.core.PluginBag; requestHandler : '/analysis/field' created with startup=lazy 
+INFO  - 2019-05-16 04:18:08.117; [   ] org.apache.solr.core.PluginBag; requestHandler : '/analysis/field' created with startup=lazy 
+INFO  - 2019-05-16 04:18:08.121; [   ] org.apache.solr.core.PluginBag; requestHandler : '/analysis/document' created with startup=lazy 
+INFO  - 2019-05-16 04:18:08.121; [   ] org.apache.solr.core.PluginBag; requestHandler : '/suggest' created with startup=lazy 
+INFO  - 2019-05-16 04:18:08.121; [   ] org.apache.solr.core.PluginBag; requestHandler : '/analysis/document' created with startup=lazy 
+INFO  - 2019-05-16 04:18:08.121; [   ] org.apache.solr.core.PluginBag; requestHandler : '/tvrh' created with startup=lazy 
+INFO  - 2019-05-16 04:18:08.121; [   ] org.apache.solr.core.PluginBag; requestHandler : '/spell' created with startup=lazy 
+INFO  - 2019-05-16 04:18:08.121; [   ] org.apache.solr.core.PluginBag; requestHandler : '/spell' created with startup=lazy 
+INFO  - 2019-05-16 04:18:08.121; [   ] org.apache.solr.core.PluginBag; requestHandler : '/terms' created with startup=lazy 
+INFO  - 2019-05-16 04:18:08.121; [   ] org.apache.solr.core.PluginBag; requestHandler : '/suggest' created with startup=lazy 
+INFO  - 2019-05-16 04:18:08.121; [   ] org.apache.solr.core.PluginBag; requestHandler : '/suggest' created with startup=lazy 
+INFO  - 2019-05-16 04:18:08.125; [   ] org.apache.solr.core.PluginBag; requestHandler : '/tvrh' created with startup=lazy 
+INFO  - 2019-05-16 04:18:08.125; [   ] org.apache.solr.core.PluginBag; requestHandler : '/elevate' created with startup=lazy 
+INFO  - 2019-05-16 04:18:08.125; [   ] org.apache.solr.core.PluginBag; requestHandler : '/terms' created with startup=lazy 
+INFO  - 2019-05-16 04:18:08.137; [   ] org.apache.solr.core.PluginBag; requestHandler : '/elevate' created with startup=lazy 
+INFO  - 2019-05-16 04:18:08.125; [   ] org.apache.solr.core.PluginBag; requestHandler : '/tvrh' created with startup=lazy 
+INFO  - 2019-05-16 04:18:08.141; [   ] org.apache.solr.core.PluginBag; requestHandler : '/terms' created with startup=lazy 
+INFO  - 2019-05-16 04:18:08.141; [   ] org.apache.solr.core.RequestHandlers; Registered paths: /admin/mbeans,/browse,/update/json/docs,/admin/luke,/get,/admin/properties,/elevate,/update/json,/admin/threads,/query,/analysis/field,/analysis/document,/spell,/update/csv,/tvrh,/select,/admin/segments,/admin/system,/suggest,/replication,/config,/schema,/admin/plugins,/admin/logging,/admin,/admin/ping,/update,/admin/file,/debug/dump,/terms,/dataimport,/update/extract
+INFO  - 2019-05-16 04:18:08.129; [   ] org.apache.solr.core.RequestHandlers; Registered paths: /admin/mbeans,/browse,/update/json/docs,/admin/luke,/get,/admin/properties,/elevate,/update/json,/admin/threads,/query,/analysis/field,/analysis/document,/spell,/update/csv,/tvrh,/select,/admin/segments,/admin/system,/suggest,/replication,/config,/schema,/admin/plugins,/admin/logging,/admin,/admin/ping,/update,/admin/file,/debug/dump,/terms,/dataimport,/update/extract
+INFO  - 2019-05-16 04:18:08.141; [   ] org.apache.solr.core.PluginBag; requestHandler : '/elevate' created with startup=lazy 
+INFO  - 2019-05-16 04:18:08.141; [   ] org.apache.solr.core.RequestHandlers; Registered paths: /admin/mbeans,/browse,/update/json/docs,/admin/luke,/get,/admin/properties,/elevate,/update/json,/admin/threads,/query,/analysis/field,/analysis/document,/spell,/update/csv,/tvrh,/select,/admin/segments,/admin/system,/suggest,/replication,/config,/schema,/admin/plugins,/admin/logging,/admin,/admin/ping,/update,/admin/file,/debug/dump,/terms,/dataimport,/update/extract
+INFO  - 2019-05-16 04:18:08.145; [   ] org.apache.solr.core.SolrCore; Using default statsCache cache: org.apache.solr.search.stats.LocalStatsCache
+INFO  - 2019-05-16 04:18:08.145; [   ] org.apache.solr.core.SolrCore; Using default statsCache cache: org.apache.solr.search.stats.LocalStatsCache
+INFO  - 2019-05-16 04:18:08.145; [   ] org.apache.solr.update.UpdateHandler; Using UpdateLog implementation: org.apache.solr.update.UpdateLog
+INFO  - 2019-05-16 04:18:08.149; [   ] org.apache.solr.core.SolrCore; Using default statsCache cache: org.apache.solr.search.stats.LocalStatsCache
+INFO  - 2019-05-16 04:18:08.149; [   ] org.apache.solr.update.UpdateHandler; Using UpdateLog implementation: org.apache.solr.update.UpdateLog
+INFO  - 2019-05-16 04:18:08.149; [   ] org.apache.solr.update.UpdateLog; Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10
+INFO  - 2019-05-16 04:18:08.149; [   ] org.apache.solr.update.UpdateHandler; Using UpdateLog implementation: org.apache.solr.update.UpdateLog
+INFO  - 2019-05-16 04:18:08.149; [   ] org.apache.solr.update.UpdateLog; Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10
+INFO  - 2019-05-16 04:18:08.149; [   ] org.apache.solr.update.UpdateLog; Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10
+INFO  - 2019-05-16 04:18:13.718; [   ] org.apache.solr.update.CommitTracker; Hard AutoCommit: if uncommited for 15000ms; 
+INFO  - 2019-05-16 04:18:13.718; [   ] org.apache.solr.update.CommitTracker; Soft AutoCommit: disabled
+INFO  - 2019-05-16 04:18:13.730; [   ] org.apache.solr.update.CommitTracker; Hard AutoCommit: if uncommited for 15000ms; 
+INFO  - 2019-05-16 04:18:13.730; [   ] org.apache.solr.update.CommitTracker; Soft AutoCommit: disabled
+INFO  - 2019-05-16 04:18:15.062; [   ] org.apache.solr.core.SolrDeletionPolicy; SolrDeletionPolicy.onInit: commits: num=1
+	commit{dir=NRTCachingDirectory(MMapDirectory@E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\SearchRecruiter\data\index lockFactory=org.apache.lucene.store.NativeFSLockFactory@6ab400e8; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_e9,generation=513}
+INFO  - 2019-05-16 04:18:15.066; [   ] org.apache.solr.core.SolrDeletionPolicy; newest commit generation = 513
+INFO  - 2019-05-16 04:18:15.070; [   ] org.apache.solr.core.SolrDeletionPolicy; SolrDeletionPolicy.onInit: commits: num=1
+	commit{dir=NRTCachingDirectory(MMapDirectory@E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\SearchJobseeker\data\index lockFactory=org.apache.lucene.store.NativeFSLockFactory@6ab400e8; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_6w,generation=248}
+INFO  - 2019-05-16 04:18:15.070; [   ] org.apache.solr.core.SolrDeletionPolicy; newest commit generation = 248
+INFO  - 2019-05-16 04:18:16.425; [   ] org.apache.solr.search.SolrIndexSearcher; Opening Searcher@66954373[SearchJobseeker] main
+INFO  - 2019-05-16 04:18:16.445; [   ] org.apache.solr.rest.ManagedResourceStorage$FileStorageIO; File-based storage initialized to use dir: E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\SearchJobseeker\conf
+INFO  - 2019-05-16 04:18:16.465; [   ] org.apache.solr.rest.RestManager; Initializing RestManager with initArgs: {storageDir=E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\SearchJobseeker\conf}
+INFO  - 2019-05-16 04:18:16.473; [   ] org.apache.solr.rest.ManagedResourceStorage; Reading _rest_managed.json using file:dir=E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\SearchJobseeker\conf
+INFO  - 2019-05-16 04:18:16.473; [   ] org.apache.solr.rest.RestManager; Initializing 0 registered ManagedResources
+INFO  - 2019-05-16 04:18:16.473; [   ] org.apache.solr.handler.component.SpellCheckComponent; Initializing spell checkers
+INFO  - 2019-05-16 04:18:16.481; [   ] org.apache.solr.spelling.DirectSolrSpellChecker; init: {name=default,field=text,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+INFO  - 2019-05-16 04:18:16.481; [   ] org.apache.solr.handler.component.SpellCheckComponent; No queryConverter defined, using default converter
+INFO  - 2019-05-16 04:18:16.481; [   ] org.apache.solr.handler.component.SuggestComponent; Initializing SuggestComponent
+INFO  - 2019-05-16 04:18:16.481; [   ] org.apache.solr.spelling.suggest.SolrSuggester; init: {name=mySuggester,lookupImpl=FuzzyLookupFactory,dictionaryImpl=DocumentDictionaryFactory,field=cat,weightField=price,suggestAnalyzerFieldType=string}
+INFO  - 2019-05-16 04:18:16.485; [   ] org.apache.solr.spelling.suggest.SolrSuggester; Dictionary loaded with params: {name=mySuggester,lookupImpl=FuzzyLookupFactory,dictionaryImpl=DocumentDictionaryFactory,field=cat,weightField=price,suggestAnalyzerFieldType=string}
+INFO  - 2019-05-16 04:18:16.485; [   ] org.apache.solr.handler.component.SuggestComponent; Registering searcher listener for suggester: mySuggester - SuggesterListener [core=org.apache.solr.core.SolrCore@36cae089, suggester=SolrSuggester [ name=mySuggester, sourceLocation=null, storeDir=, lookupImpl=FuzzyLookupFactory, dictionaryImpl=DocumentDictionaryFactory, sizeInBytes=0 ], buildOnCommit=false, buildOnOptimize=false, buildOnStartup=true, isCoreReload=false]
+INFO  - 2019-05-16 04:18:16.485; [   ] org.apache.solr.handler.component.QueryElevationComponent; Loading QueryElevation from: E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\SearchJobseeker\conf\elevate.xml
+INFO  - 2019-05-16 04:18:16.813; [   ] org.apache.solr.handler.ReplicationHandler; Commits will be reserved for  10000
+WARN  - 2019-05-16 04:18:16.829; [   ] org.apache.solr.handler.admin.AdminHandlers; <requestHandler name="/admin/" 
+ class="solr.admin.AdminHandlers" /> is deprecated . It is not required anymore
+INFO  - 2019-05-16 04:18:16.829; [   ] org.apache.solr.core.QuerySenderListener; QuerySenderListener sending requests to Searcher@66954373[SearchJobseeker] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_68(5.1.0):C13)))}
+INFO  - 2019-05-16 04:18:16.829; [   ] org.apache.solr.core.CoreContainer; registering core: SearchJobseeker
+INFO  - 2019-05-16 04:18:16.837; [   ] org.apache.solr.core.SolrCore; [SearchJobseeker] webapp=null path=null params={q=static+firstSearcher+warming+in+solrconfig.xml&distrib=false&event=firstSearcher} hits=6 status=0 QTime=8 
+INFO  - 2019-05-16 04:18:16.849; [   ] org.apache.solr.core.QuerySenderListener; QuerySenderListener done.
+INFO  - 2019-05-16 04:18:16.865; [   ] org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener; Loading spell index for spellchecker: default
+INFO  - 2019-05-16 04:18:16.869; [   ] org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener; Loading spell index for spellchecker: wordbreak
+INFO  - 2019-05-16 04:18:16.873; [   ] org.apache.solr.handler.component.SuggestComponent$SuggesterListener; buildOnStartup: mySuggester
+INFO  - 2019-05-16 04:18:16.873; [   ] org.apache.solr.spelling.suggest.SolrSuggester; SolrSuggester.build(mySuggester)
+INFO  - 2019-05-16 04:18:16.897; [   ] org.apache.solr.core.SolrCore; [SearchJobseeker] Registered new searcher Searcher@66954373[SearchJobseeker] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_68(5.1.0):C13)))}
+INFO  - 2019-05-16 04:18:17.384; [   ] org.apache.solr.search.SolrIndexSearcher; Opening Searcher@74fea520[SearchRecruiter] main
+INFO  - 2019-05-16 04:18:17.384; [   ] org.apache.solr.rest.ManagedResourceStorage$FileStorageIO; File-based storage initialized to use dir: E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\SearchRecruiter\conf
+INFO  - 2019-05-16 04:18:17.384; [   ] org.apache.solr.rest.RestManager; Initializing RestManager with initArgs: {storageDir=E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\SearchRecruiter\conf}
+INFO  - 2019-05-16 04:18:17.384; [   ] org.apache.solr.rest.ManagedResourceStorage; Reading _rest_managed.json using file:dir=E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\SearchRecruiter\conf
+INFO  - 2019-05-16 04:18:17.388; [   ] org.apache.solr.rest.RestManager; Initializing 0 registered ManagedResources
+INFO  - 2019-05-16 04:18:17.388; [   ] org.apache.solr.handler.component.SpellCheckComponent; Initializing spell checkers
+INFO  - 2019-05-16 04:18:17.388; [   ] org.apache.solr.spelling.DirectSolrSpellChecker; init: {name=default,field=text,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+INFO  - 2019-05-16 04:18:17.388; [   ] org.apache.solr.handler.component.SpellCheckComponent; No queryConverter defined, using default converter
+INFO  - 2019-05-16 04:18:17.388; [   ] org.apache.solr.handler.component.SuggestComponent; Initializing SuggestComponent
+INFO  - 2019-05-16 04:18:17.388; [   ] org.apache.solr.spelling.suggest.SolrSuggester; init: {name=mySuggester,lookupImpl=FuzzyLookupFactory,dictionaryImpl=DocumentDictionaryFactory,field=cat,weightField=price,suggestAnalyzerFieldType=string}
+INFO  - 2019-05-16 04:18:17.388; [   ] org.apache.solr.spelling.suggest.SolrSuggester; Dictionary loaded with params: {name=mySuggester,lookupImpl=FuzzyLookupFactory,dictionaryImpl=DocumentDictionaryFactory,field=cat,weightField=price,suggestAnalyzerFieldType=string}
+INFO  - 2019-05-16 04:18:17.392; [   ] org.apache.solr.handler.component.SuggestComponent; Registering searcher listener for suggester: mySuggester - SuggesterListener [core=org.apache.solr.core.SolrCore@329967ce, suggester=SolrSuggester [ name=mySuggester, sourceLocation=null, storeDir=, lookupImpl=FuzzyLookupFactory, dictionaryImpl=DocumentDictionaryFactory, sizeInBytes=0 ], buildOnCommit=false, buildOnOptimize=false, buildOnStartup=true, isCoreReload=false]
+INFO  - 2019-05-16 04:18:17.392; [   ] org.apache.solr.handler.component.QueryElevationComponent; Loading QueryElevation from: E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\SearchRecruiter\conf\elevate.xml
+INFO  - 2019-05-16 04:18:17.632; [   ] org.apache.solr.handler.ReplicationHandler; Commits will be reserved for  10000
+WARN  - 2019-05-16 04:18:17.652; [   ] org.apache.solr.handler.admin.AdminHandlers; <requestHandler name="/admin/" 
+ class="solr.admin.AdminHandlers" /> is deprecated . It is not required anymore
+INFO  - 2019-05-16 04:18:17.652; [   ] org.apache.solr.core.QuerySenderListener; QuerySenderListener sending requests to Searcher@74fea520[SearchRecruiter] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_d4(5.1.0):C2)))}
+INFO  - 2019-05-16 04:18:17.656; [   ] org.apache.solr.core.CoreContainer; registering core: SearchRecruiter
+INFO  - 2019-05-16 04:18:17.660; [   ] org.apache.solr.core.SolrCore; [SearchRecruiter] webapp=null path=null params={q=static+firstSearcher+warming+in+solrconfig.xml&distrib=false&event=firstSearcher} hits=0 status=0 QTime=0 
+INFO  - 2019-05-16 04:18:17.664; [   ] org.apache.solr.core.QuerySenderListener; QuerySenderListener done.
+INFO  - 2019-05-16 04:18:17.664; [   ] org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener; Loading spell index for spellchecker: default
+INFO  - 2019-05-16 04:18:17.664; [   ] org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener; Loading spell index for spellchecker: wordbreak
+INFO  - 2019-05-16 04:18:17.664; [   ] org.apache.solr.handler.component.SuggestComponent$SuggesterListener; buildOnStartup: mySuggester
+INFO  - 2019-05-16 04:18:17.668; [   ] org.apache.solr.spelling.suggest.SolrSuggester; SolrSuggester.build(mySuggester)
+INFO  - 2019-05-16 04:18:17.676; [   ] org.apache.solr.core.SolrCore; [SearchRecruiter] Registered new searcher Searcher@74fea520[SearchRecruiter] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_d4(5.1.0):C2)))}
+INFO  - 2019-05-16 04:18:18.724; [   ] org.apache.solr.update.CommitTracker; Hard AutoCommit: if uncommited for 15000ms; 
+INFO  - 2019-05-16 04:18:18.724; [   ] org.apache.solr.update.CommitTracker; Soft AutoCommit: disabled
+INFO  - 2019-05-16 04:18:19.924; [   ] org.apache.solr.core.SolrDeletionPolicy; SolrDeletionPolicy.onInit: commits: num=1
+	commit{dir=NRTCachingDirectory(MMapDirectory@E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\SearchJobs\data\index lockFactory=org.apache.lucene.store.NativeFSLockFactory@6ab400e8; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_64,generation=220}
+INFO  - 2019-05-16 04:18:19.928; [   ] org.apache.solr.core.SolrDeletionPolicy; newest commit generation = 220
+INFO  - 2019-05-16 04:18:22.334; [   ] org.apache.solr.search.SolrIndexSearcher; Opening Searcher@6d1f2833[SearchJobs] main
+INFO  - 2019-05-16 04:18:22.338; [   ] org.apache.solr.rest.ManagedResourceStorage$FileStorageIO; File-based storage initialized to use dir: E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\SearchJobs\conf
+INFO  - 2019-05-16 04:18:22.338; [   ] org.apache.solr.rest.RestManager; Initializing RestManager with initArgs: {storageDir=E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\SearchJobs\conf}
+INFO  - 2019-05-16 04:18:22.338; [   ] org.apache.solr.rest.ManagedResourceStorage; Reading _rest_managed.json using file:dir=E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\SearchJobs\conf
+INFO  - 2019-05-16 04:18:22.338; [   ] org.apache.solr.rest.RestManager; Initializing 0 registered ManagedResources
+INFO  - 2019-05-16 04:18:22.338; [   ] org.apache.solr.handler.component.SpellCheckComponent; Initializing spell checkers
+INFO  - 2019-05-16 04:18:22.342; [   ] org.apache.solr.spelling.DirectSolrSpellChecker; init: {name=default,field=text,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+INFO  - 2019-05-16 04:18:22.342; [   ] org.apache.solr.handler.component.SpellCheckComponent; No queryConverter defined, using default converter
+INFO  - 2019-05-16 04:18:22.342; [   ] org.apache.solr.handler.component.SuggestComponent; Initializing SuggestComponent
+INFO  - 2019-05-16 04:18:22.342; [   ] org.apache.solr.spelling.suggest.SolrSuggester; init: {name=mySuggester,lookupImpl=FuzzyLookupFactory,dictionaryImpl=DocumentDictionaryFactory,field=cat,weightField=price,suggestAnalyzerFieldType=string}
+INFO  - 2019-05-16 04:18:22.342; [   ] org.apache.solr.spelling.suggest.SolrSuggester; Dictionary loaded with params: {name=mySuggester,lookupImpl=FuzzyLookupFactory,dictionaryImpl=DocumentDictionaryFactory,field=cat,weightField=price,suggestAnalyzerFieldType=string}
+INFO  - 2019-05-16 04:18:22.342; [   ] org.apache.solr.handler.component.SuggestComponent; Registering searcher listener for suggester: mySuggester - SuggesterListener [core=org.apache.solr.core.SolrCore@74f4d51b, suggester=SolrSuggester [ name=mySuggester, sourceLocation=null, storeDir=, lookupImpl=FuzzyLookupFactory, dictionaryImpl=DocumentDictionaryFactory, sizeInBytes=0 ], buildOnCommit=false, buildOnOptimize=false, buildOnStartup=true, isCoreReload=false]
+INFO  - 2019-05-16 04:18:22.346; [   ] org.apache.solr.handler.component.QueryElevationComponent; Loading QueryElevation from: E:\Solr Nandha\LeapEdge.SolrInstance\solr\server\solr\SearchJobs\conf\elevate.xml
+INFO  - 2019-05-16 04:18:22.478; [   ] org.apache.solr.handler.ReplicationHandler; Commits will be reserved for  10000
+WARN  - 2019-05-16 04:18:22.490; [   ] org.apache.solr.handler.admin.AdminHandlers; <requestHandler name="/admin/" 
+ class="solr.admin.AdminHandlers" /> is deprecated . It is not required anymore
+INFO  - 2019-05-16 04:18:22.490; [   ] org.apache.solr.core.QuerySenderListener; QuerySenderListener sending requests to Searcher@6d1f2833[SearchJobs] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_5g(5.1.0):C52)))}
+INFO  - 2019-05-16 04:18:22.490; [   ] org.apache.solr.core.CoreContainer; registering core: SearchJobs
+INFO  - 2019-05-16 04:18:22.494; [   ] org.apache.solr.servlet.SolrDispatchFilter; user.dir=E:\Solr Nandha\LeapEdge.SolrInstance\solr\server
+INFO  - 2019-05-16 04:18:22.494; [   ] org.apache.solr.servlet.SolrDispatchFilter; SolrDispatchFilter.init() done
+INFO  - 2019-05-16 04:18:22.494; [   ] org.apache.solr.core.SolrCore; [SearchJobs] webapp=null path=null params={q=static+firstSearcher+warming+in+solrconfig.xml&distrib=false&event=firstSearcher} hits=41 status=0 QTime=0 
+INFO  - 2019-05-16 04:18:22.498; [   ] org.apache.solr.core.QuerySenderListener; QuerySenderListener done.
+INFO  - 2019-05-16 04:18:22.502; [   ] org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener; Loading spell index for spellchecker: default
+INFO  - 2019-05-16 04:18:22.502; [   ] org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener; Loading spell index for spellchecker: wordbreak
+INFO  - 2019-05-16 04:18:22.502; [   ] org.apache.solr.handler.component.SuggestComponent$SuggesterListener; buildOnStartup: mySuggester
+INFO  - 2019-05-16 04:18:22.510; [   ] org.apache.solr.spelling.suggest.SolrSuggester; SolrSuggester.build(mySuggester)
+INFO  - 2019-05-16 04:18:22.542; [   ] org.apache.solr.core.SolrCore; [SearchJobs] Registered new searcher Searcher@6d1f2833[SearchJobs] main{ExitableDirectoryReader(UninvertingDirectoryReader(Uninverting(_5g(5.1.0):C52)))}
+INFO  - 2019-05-16 04:18:23.030; [   ] org.eclipse.jetty.server.AbstractConnector; Started SocketConnector@0.0.0.0:8983
+INFO  - 2019-05-16 06:21:43.424; [   ] org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1557987703010} status=0 QTime=406 
+INFO  - 2019-05-16 06:21:43.704; [   ] org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/system params={wt=json&_=1557987703527} status=0 QTime=159 
+INFO  - 2019-05-16 07:55:29.400; [   LiveSearchJobseeker] org.apache.solr.core.SolrCore; [LiveSearchJobseeker] webapp=/solr path=/select params={q=c#&facet.field=PresentLocation&facet.field=JobFunction&facet.field=JobIndustry&indent=true&start=0&fq=NOT+BlockedCompanies:"17"&sort=score+desc,+LastActive+desc&facet.mincount=1&rows=10&wt=json&facet=true} hits=23 status=0 QTime=3164 

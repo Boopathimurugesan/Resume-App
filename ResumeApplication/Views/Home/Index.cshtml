@@ -1,0 +1,344 @@
+﻿@using ResumeDBTracker.Business.ViewModel
+
+@{
+    ViewData["Title"] = "Resume Upload";
+}
+@model List<FileUpload>
+
+<body>
+<div class="text-center">
+<form method="post" enctype="multipart/form-data" asp-controller="Home"
+      asp-action="Index" >
+
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<div class="heading">
+						<h4>Resume Upload</h4>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12 col-sm-12 col-md-12">
+					<div>
+						<div class="midContent">
+							<div class="tableName">
+								<h6 class="poppins">Add </h6>
+							</div>
+							@* <form action="" method="post" enctype="multipart/form-data"> *@
+								<div class="form-group mb-3 row">
+									<div class="col-3">Select file</div>
+									<div class="col">
+										<input type="file" name="postedFile" class="form-control bg-gray" multiple required> @*webkitdirectory directory*@
+									</div>
+								</div>
+								<div class="form-group pb-3 row">
+									<div class="col-3">@* Boopathi *@
+										Select Category										
+									</div>
+									<div class="col-6 mb-3">
+										<select id="existingcategory" name="category_id" class="form-control">
+												<option value="0">--select--</option>
+												@if (ViewBag.Categories != null && ViewBag.Categories != null)
+												{
+													foreach (var category in ViewBag.Categories)
+													{
+														<option value="@category.category_id">@Html.Raw(category.name)</option>
+													}
+												}
+										</select>
+									</div>
+									<div class="col-3 mb-3">
+										@* Boopathi *@
+										<input id="create-category-modal-btn" type="button" style="display:block;" class="btn btn-outline-secondary rounded-0 shadow-none border-0 text-white w-auto bg-secondary bg-opacity-50" value="Add Category" />
+									</div>									
+								</div>
+								<div class="form-group pb-3 row">
+									<div class="col">
+										<button type="submit" id="upload" name="Upload" class="btn btn-green" formaction=@Url.Action("Index")>Submit</button>
+									</div>
+								</div>
+							@* </form> *@
+							
+							@if (Model != null)
+							{
+								int i = 1;
+								int j = 1;
+								<div class="table-responsive">
+									<table class="table">
+										<thead>
+											<tr>
+												<th class="countNo">Sr&nbsp;No</th>
+												<th>File&nbsp;Name (Uploaded Status)</th>
+												<th>IsProcessed</th>
+												<th>Comment</th>
+												<th>download</th>
+											</tr>
+										</thead>
+										<tbody>
+											@foreach (var emp in Model)
+											{
+												if (@emp.Message == "Not yet Processed" && j == 1)
+												{
+													j++;
+													<thead style="background-color:indianred">
+														<tr>
+															<th class="countNo">Sr&nbsp;No</th>
+															<th>File&nbsp;Name</th>
+															<th>IsProcessed</th>
+															<th>Comment</th>
+															<th>download</th>
+														</tr>
+													</thead>
+												}
+												<tr>
+													<td class="text-center"><div class="srno">@i</div></td>
+													<td style="text-align: left">@emp.FileName</td>
+													@if (@emp.IsProcessed == false)
+													{
+														<td style="color:red">@emp.IsProcessed</td>
+													}
+													else
+													{
+														<td>@emp.IsProcessed</td>
+													}
+													<td style="text-align: left">@emp.Message</td>
+												<td class="action">
+													<button type="button" title="Download Resume" onclick="downloadFile('@emp.FileName','@emp.resume_file');"><i data-feather="download"></i></button>
+													</td>
+												</tr>
+												i++;
+											}
+										</tbody>
+									</table>
+								</div>
+
+							}
+						</div>
+					</div>
+				</div>
+			</div>
+						
+			<div class="modal" id="create-category-modal" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"> 
+				<div class="modal-dialog modal-dialog-centered">
+					<div class="modal-content">
+						<div class="modal-body text-center">
+
+							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+							
+							@* <h5>Assign Category</h5> *@
+
+							<div class="row justify-content-center mt-4">
+								<div class="form-group row">
+									@* <div class="col-12 mb-3">
+										<select id="existingcategory" class="form-control">
+											<option value="">--select--</option>
+											@if (ViewBag.Categories != null && ViewBag.Categories != null)
+											{
+												foreach (var category in ViewBag.Categories)
+												{
+													<option value="@category.category_id">@Html.Raw(category.name)</option>
+												}
+											}
+										</select>
+									</div> *@
+									<div class="col-12 mb-3">
+										<div class="form-check form-switch">
+											@* <input class="form-check-input" type="checkbox" id="newcategory-checkbox" /> *@
+											<label class="form-check-label" for="newcategory-checkbox">New Category</label>
+										</div>
+									</div>
+									<div class="col-12 mb-3">
+										<input type="text" id="newcategory" class="form-control" style="display:block;" placeholder="Category Name" />
+									</div>
+								</div>
+							</div>
+
+							<div class="col-auto">
+								<button type="button" id="submit-category-modal-btn" class="btn btn-primary">Submit</button>
+								<button type="button" name="submit" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close">No</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>       
+    </form>
+</div>
+</body>
+<script>
+
+	function downloadFile(fileName, fileContent) {
+		alert(fileName);
+		alert(fileContent);
+		let bufferArray = base64ToArrayBuffer(fileContent);
+		const blob = new Blob([new Uint8Array(bufferArray)], { type: 'application/msword' });
+		const url = URL.createObjectURL(blob);
+		const a = document.createElement('a');
+		a.href = url;
+		a.download = fileName;
+		a.style.display = 'none';
+		document.body.appendChild(a);
+
+		a.click();
+
+		document.body.removeChild(a);
+		URL.revokeObjectURL(url);
+	}
+
+	function base64ToArrayBuffer(base64) {
+		alert(base64);
+		const binaryString = window.atob(base64);
+		alert(binaryString);
+		const length = binaryString.length;
+		alert(length);
+		const buffer = new ArrayBuffer(length);
+		alert(buffer);
+		const view = new Uint8Array(buffer);
+		alert(view);
+
+		for (let i = 0; i < length; i++) {
+			view[i] = binaryString.charCodeAt(i);
+		}
+
+		alert(buffer);
+		return buffer;
+	}
+
+	//Boopathi
+	function ClearAndAddCategoryOptions()
+	{
+		$.ajax(
+			{
+				type: 'GET',
+				dataType: 'JSON',
+				url: '@Url.Action("GetCategories")',
+				data: '',
+				success:
+					function (response) {
+						
+						$('#existingcategory')
+							.find('option')
+							.remove()
+							.end();
+
+						$('#existingcategory')
+							.append("<option value=0>Select</option>");
+							
+						if (response != null) {
+							
+							$.each(response, function (i) {
+								//console.log(response[i]);
+
+								$('#existingcategory')
+									.append("<option value=" + response[i].category_id + ">" + response[i].name + "</option>");								
+							});							
+						}
+					},
+				error:
+					function (response) {
+						alert("Fetch Failed");
+					}
+			}
+		);
+	}
+
+	$(document).ready(function () {
+		
+		//Boopathi
+		$('form').submit(function (e) {
+			
+			var cat = $('#existingcategory');
+			
+			if (cat.val() == "0")
+			{
+				alert('Please select Category');
+				e.preventDefault();
+				return false;
+			}			
+
+			//ClearAndAddCategoryOptions();
+			
+		});
+
+		$('#create-category-modal-btn').on('click', function (e) {
+			$('#create-category-modal').modal('show');
+		});
+
+		$('#newcategory-checkbox').on('click', function () {
+			if ($('#newcategory-checkbox').is(":checked")) {
+				$("#existingcategory").css("display", "none");
+				$("#newcategory").css("display", "block");
+			} else {
+				$("#existingcategory").css("display", "block");
+				$("#newcategory").css("display", "none");
+				$("#newcategory").val("");
+			}
+		});
+
+		$("#submit-category-modal-btn").on('click', function (e) {
+			
+			//Boopathi
+			var name = $('#newcategory').val().trim();
+			if (name.length == 0) {
+				alert('Please enter Category');
+				return;
+			}
+						
+			var candidateIds = $('#candidate_ids:checked').map(function () {
+				return this.value;
+			}).get().join(",");
+			var name = $("#newcategory").val();
+			var categoryId = $("#existingcategory").val();
+
+			//Boopathi
+			//var isNew = $('#newcategory-checkbox').is(":checked");
+			var isNew = true;
+
+			var data = isNew ? {
+				candidateIds: candidateIds,
+				name: name
+			} : {
+				candidateIds: candidateIds,
+				categoryId: categoryId
+			};
+			$.ajax(
+				{
+					type: 'POST',
+					dataType: 'JSON',
+					url: isNew ? '@Url.Action("CategoryInsert")' : '@Url.Action("CategoryCandidateMappingInsert")',
+					data: data,
+					success:
+						function (response) {
+							alert("Category Created Successfully");
+
+							//Boopathi
+							$('#create-category-modal').modal('hide');
+							
+							ClearAndAddCategoryOptions();
+
+							// $('#create-category-modal-btn').css("display", "none");
+							// $("#existingcategory").css("display", "block");
+							// $("#newcategory").css("display", "none");
+							// $("#newcategory").val("");
+							// $('#create-category-modal').css("class", "modal hide");
+						},
+					error:
+						function (response) {
+							alert("Update Failed");
+						}
+				});
+		});
+	});
+
+	</script>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}
+
+
+

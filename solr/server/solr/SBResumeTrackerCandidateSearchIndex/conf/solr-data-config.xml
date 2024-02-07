@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<dataConfig>
+  <dataSource  type="JdbcDataSource"
+                 driver="com.microsoft.sqlserver.jdbc.SQLServerDriver"
+              url="jdbc:sqlserver://212.227.192.133;databaseName=SBResumeTracker"
+              user="ResumeTracker"
+              password="RT@Skybridge$2023"/>
+  <document>
+      <entity 
+	  name="candidate" 
+	  query="SELECT CI.[candidate_id]
+			  ,CI.[resume_id]
+			  ,CI.[first_name]
+			  ,CI.[last_name]
+			  ,CI.[email]
+			  ,CI.[phone_number]
+			  ,CI.[location]
+			  ,CASE WHEN LEN(CI.[total_exp]) > 0 THEN CI.[total_exp] ELSE '0' END total_exp
+			  ,CI.[technical_skill]
+			  ,CI.[created_at]
+			  ,CS.[file_content]
+			  ,CS.[resume_file]
+			  ,CS.[file_name]
+		  FROM [sb].[candidate_info] CI
+		  INNER JOIN [sb].[candidate_resume] CS
+		  ON CI.[resume_id] = CS.[resume_id]
+		  WHERE [IsDeleted] = 0"
+		  >
+         <field column="candidate_id" name="candidate_id" />
+         <field column="resume_id" name="resume_id" />
+		 <field column="first_name" name="first_name" />
+		 <field column="last_name" name="last_name" />
+		 <field column="email" name="email" />
+		 <field column="phone_number" name="phone_number" />
+		 <field column="location" name="location" />
+		 <field column="total_exp" name="total_exp" />
+		 <field column="technical_skill" name="technical_skill" />
+		 <field column="created_at" name="created_at" />
+		 <field column="file_content" name="file_content"/>
+		 <field column="resume_file" name="resume_file"/>
+		 <field column="file_name" name="file_name"/>
+      </entity>
+	  <!-- Query to select inactive candidates for deletion -->
+    <entity name="inactiveCandidates" 
+            query="SELECT candidate_id FROM [sb].[candidate_resume] WHERE [IsDeleted] = 1">
+      <!-- Use the 'deleteDocById' processor to delete documents -->
+      <processor class="solr.AddUpdateProcessorFactory">
+        <bool name="deleteById">${inactiveCandidates.candidate_id}</bool>
+      </processor>
+    </entity>
+   </document>
+</dataConfig>
